@@ -68,16 +68,18 @@ int main()
 {
 	stack s;
 	s.init();
-	s.push(1);
+	s.push('x');
+	printf("%c\n", s.top());
 	s.push(2);
 	s.push(3);
-	s.push(4);
+	s.push(100000000);
 
 	printf("%d\n", s.top());
 	printf("%d\n", s.size());
 	s.pop();
 	s.pop();
-	printf("%d\n", s.top());
+	s.push(100000);
+	printf("%d\n", (int)sizeof(s.top()));
 	printf("%d\n", s.size());
 	s.destroy();
 	return 0;
