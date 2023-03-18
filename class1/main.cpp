@@ -30,7 +30,8 @@ using R::a;
 int main()
 {
 	int a;
-	cin >> a;
-	cout << a << endl;
+	char b;
+	cin >> a >> b;
+	cout << a << b << endl;
 	return 0;
 }
