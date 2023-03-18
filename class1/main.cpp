@@ -19,11 +19,18 @@ int& Add(int a, int b)
 	return c;
 }
 using R::a;
+//int main()
+//{
+//	int& ret = Add(1, 2);
+//	Add(3, 4);
+//	cout << "Add(1, 2) is :" << ret << endl;
+//	cout << a << endl;
+//	return 0;
+//}
 int main()
 {
-	int& ret = Add(1, 2);
-	Add(3, 4);
-	cout << "Add(1, 2) is :" << ret << endl;
+	int a;
+	cin >> a;
 	cout << a << endl;
 	return 0;
 }
