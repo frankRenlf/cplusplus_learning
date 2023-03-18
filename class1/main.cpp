@@ -27,11 +27,11 @@ using R::a;
 //	cout << a << endl;
 //	return 0;
 //}
-int main()
-{
-	int a;
-	char b;
-	cin >> a >> b;
-	cout << a << b << endl;
-	return 0;
-}
+//int main()
+//{
+//	int a;
+//	char b;
+//	cin >> a >> b;
+//	cout << a << b << endl;
+//	return 0;
+//}
