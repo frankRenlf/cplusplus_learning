@@ -18,6 +18,12 @@ void TestA()
 	A a3(a1);
 	cout << A::GetACount() << endl;
 }
+int recall(int n) {
+	if (n < 1) {
+		return 0;
+	}
+	return n += recall(n - 1);
+}
 int main() {
-	TestA();
+	cout << recall(5) << endl;
 }
