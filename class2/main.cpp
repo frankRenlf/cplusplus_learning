@@ -27,7 +27,19 @@ int recall(int n) {
 	}
 	return n += recall(n - 1);
 }
-int main() {
-	cout << recall(5) << endl;
-	test1();
+//int main() {
+//	cout << recall(5) << endl;
+//	test1();
+//}
+int& Add(int a, int b)
+{
+	int c = a + b;
+	return c;
+}
+int main()
+{
+	int& ret = Add(1, 2);
+	Add(3, 4);
+	cout << "Add(1, 2) is :" << ret << endl;
+	return 0;
 }
