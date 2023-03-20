@@ -1,4 +1,7 @@
 #include<iostream>
+
+#include"head.h"
+
 using namespace std;
 class A
 {
@@ -26,4 +29,5 @@ int recall(int n) {
 }
 int main() {
 	cout << recall(5) << endl;
+	test1();
 }
