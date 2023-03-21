@@ -24,10 +24,18 @@ int& Add(int a, int b)
 //	return 0;
 //}
 int main() {
+	int* arr = new int[5];
 	int a = 10;
 	int& x = a;
 	int* y = &a;
 	*y = 15;
 	cout << x << endl;
 	cout << *y << endl;
+	cout << "size: " << sizeof(arr) << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		arr[i] = i;
+		cout << arr[i] << endl;
+	}
+	return 0;
 }
