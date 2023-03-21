@@ -44,5 +44,8 @@ int& Add(int a, int b)
 //	return 0;
 //}
 int main() {
-
+	const int a = 10;
+	const int& b = a;
+	int c = 20;
+	const int& d = c;
 }
