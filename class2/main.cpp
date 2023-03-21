@@ -33,20 +33,20 @@ int recall(int n) {
 //}
 int& Add(int a, int b)
 {
-	int c = a + b;
+	static int c = a + b;
 	return c;
 }
-//int main()
-//{
-//	int& ret = Add(1, 2);
-//	Add(3, 4);
-//	cout << "Add(1, 2) is :" << ret << endl;
-//	return 0;
-//}
-int main() {
-	const int a = 10;
-	const int& b = a;
-	int c = 20;
-	const int& d = c;
-
+int main()
+{
+	int& ret = Add(1, 2);
+	Add(3, 4);
+	cout << "Add(1, 2) is :" << ret << endl;
+	return 0;
 }
+//int main() {
+//	const int a = 10;
+//	const int& b = a;
+//	int c = 20;
+//	const int& d = c;
+//
+//}
