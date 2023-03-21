@@ -48,4 +48,5 @@ int main() {
 	const int& b = a;
 	int c = 20;
 	const int& d = c;
+
 }
