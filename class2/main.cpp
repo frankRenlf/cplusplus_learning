@@ -33,7 +33,7 @@ int recall(int n) {
 //}
 int& Add(int a, int b)
 {
-	static int c = a + b;
+	int c = a + b;
 	return c;
 }
 int Add2(int a, int b)
