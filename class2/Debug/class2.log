@@ -1,0 +1,5 @@
+﻿  main.cpp
+  test1.cpp
+  正在生成代码...
+C:\Users\11195\source\repos\cplusplus_learning\class2\main.cpp(42): warning C4172: 返回局部变量或临时变量的地址: x
+  class2.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class2\Debug\class2.exe
