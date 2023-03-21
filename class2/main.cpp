@@ -45,9 +45,9 @@ int main()
 {
 	int& ret = Add(1, 2);
 	Add(3, 4);
-	int x = Add2(1, 2);
-	cout << "Add(1, 2) is :" << ret << endl;
-	cout << "Add(1, 2) is :" << x << endl;
+	int x = Add2(3, 4);
+	cout << "Add is :" << ret << endl;
+	cout << "Add2 is :" << x << endl;
 	return 0;
 }
 //int main() {
