@@ -21,6 +21,9 @@
     <ClCompile Include="test1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="speed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">
