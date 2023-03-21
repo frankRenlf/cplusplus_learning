@@ -1,3 +1,3 @@
 ﻿  speed.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class2\speed.cpp(18,4): warning C4101: “a”: 未引用的局部变量
+C:\Users\11195\source\repos\cplusplus_learning\class2\speed.cpp(20,4): warning C4101: “a”: 未引用的局部变量
   class2.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class2\x64\Debug\class2.exe

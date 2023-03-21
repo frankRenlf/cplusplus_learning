@@ -8,10 +8,12 @@ struct A { int a[10000]; };
 void TestFunc1(A a) {}
 void TestFunc2(A& a) {}
 int mul(int a, int b) {
-	return a * b;
+	int c = a * b;
+	return c;
 }
 inline int mul_inline(int a, int b) {
-	return a * b;
+	int c = a * b;
+	return c;
 }
 void TestRefAndValue()
 {
@@ -19,13 +21,13 @@ void TestRefAndValue()
 	// 以值作为函数参数
 	size_t begin1 = clock();
 	for (size_t i = 0; i < 20000; ++i) {
-		mul(1, 1);
+		mul(3, 3);
 	}
 	size_t end1 = clock();
 	// 以引用作为函数参数
 	size_t begin2 = clock();
 	for (size_t i = 0; i < 20000; ++i) {
-		mul_inline(1, 1);
+		mul_inline(3, 3);
 	}
 	size_t end2 = clock();
 	// 分别计算两个函数运行结束后的时间
