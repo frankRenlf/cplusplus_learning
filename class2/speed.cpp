@@ -33,6 +33,7 @@ void TestRefAndValue()
 	// 分别计算两个函数运行结束后的时间
 	cout << "TestFunc1(A)-time:" << end1 - begin1 << endl;
 	cout << "TestFunc2(A&)-time:" << end2 - begin2 << endl;
+	//cout << ((end1 - begin1)<(end2 - begin2)) << endl;
 }
 int main() {
 	TestRefAndValue();
