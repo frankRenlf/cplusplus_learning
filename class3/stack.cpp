@@ -4,32 +4,32 @@ class Stack {
 public:
 	Stack() {
 		this->_size = 0;
-		pre = new Node(-1);
-		top = bottom = pre->next;
+		_pre = new Node(-1);
+		_top = _bottom = _pre->next;
 	}
 	void push(int val) {
-		if (top == nullptr) {
-			top = bottom = new Node(val);
+		if (_top == nullptr) {
+			_top = _bottom = new Node(val);
 		}
 		else {
-			top->next = new Node(val);
-			top = top->next;
+			_top->next = new Node(val);
+			_top = _top->next;
 		}
 		this->_size++;
 	}
 	int pop() {
 		this->_size--;
-		int ret = top->val;
-		Node* tmp = bottom;
-		while (tmp->next != top) {
+		int ret = _top->val;
+		Node* tmp = _bottom;
+		while (tmp->next != _top) {
 			tmp = tmp->next;
 		}
-		delete top;
+		delete _top;
 		tmp->next = nullptr;
 		return ret;
 	}
 	void print() {
-		Node* tmp = bottom;
+		Node* tmp = _bottom;
 		while (tmp != nullptr) {
 			cout << tmp << ": ";
 			cout << tmp->val << " ";
@@ -48,9 +48,9 @@ private:
 		Node* next;
 	};
 	int _size;
-	Node* pre;
-	Node* top;
-	Node* bottom;
+	Node* _pre;
+	Node* _top;
+	Node* _bottom;
 };
 int main() {
 	Stack stack;
