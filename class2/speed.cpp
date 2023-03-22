@@ -35,7 +35,7 @@ void TestRefAndValue()
 	cout << "TestFunc2(A&)-time:" << end2 - begin2 << endl;
 	//cout << ((end1 - begin1)<(end2 - begin2)) << endl;
 }
-int main() {
-	TestRefAndValue();
-	return 0;
-}
+//int main() {
+//	TestRefAndValue();
+//	return 0;
+//}
