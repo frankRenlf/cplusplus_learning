@@ -48,6 +48,7 @@ public:
 		ListNode(int val) :val(val), next(nullptr) {
 		}
 	};
+private:
 	ListNode* head;
 	ListNode* pre;
 	ListNode* tail;
