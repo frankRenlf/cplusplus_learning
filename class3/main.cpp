@@ -24,9 +24,8 @@ public:
 		: a(1)
 		, b(2)
 	{}
-	~A() {
-		b.~B();
-	}
+	//~A() {
+	//}
 	void show() {
 		cout << "show()" << this->a << endl;
 	}
