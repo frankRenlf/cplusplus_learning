@@ -42,17 +42,16 @@ public:
 private:
 
 };
-int main() {
-	MultiBranchTree tree(0);
-	MultiBranchTree::TreeNode node11(11);
-	MultiBranchTree::TreeNode node22(22);
-
-	tree.cur->children.push_back(&node22);
-	tree.cur->children.push_back(&node11);
-	MultiBranchTree::TreeNode node33(33);
-	tree.cur = tree.cur->children[1];
-	tree.cur->children.push_back(&node33);
-	//tree.cur->children[1] = new MultiBranchTree::TreeNode(121);
-	tree.print();
-	return 0;
-}
+//int main() {
+//	MultiBranchTree tree(0);
+//	MultiBranchTree::TreeNode node11(11);
+//	MultiBranchTree::TreeNode node22(22);
+//
+//	tree.cur->children.push_back(&node22);
+//	tree.cur->children.push_back(&node11);
+//	MultiBranchTree::TreeNode node33(33);
+//	tree.cur = tree.cur->children[1];
+//	tree.cur->children.push_back(&node33);
+//	tree.print();
+//	return 0;
+//}
