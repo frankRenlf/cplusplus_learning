@@ -1,5 +1,6 @@
 #include<iostream>
 #include <vector>
+#include <cassert>
 using namespace std;
 class B {
 public:
@@ -11,6 +12,7 @@ public:
 	B(B& b) {
 		this->b = b.b;
 		this->arr = (int*)malloc(sizeof(int) * 5);
+		assert(this->arr);
 		memcpy(this->arr, b.arr, 5* sizeof(int));
 	}
 	~B() {
