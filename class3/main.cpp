@@ -3,17 +3,27 @@
 using namespace std;
 class B {
 public:
-	B() {
-		this->b = 2;
+	B(int b) {
+		this->b = b;
+		arr = (int*)malloc(sizeof(int) * 5);
+	}
+	~B() {
+		if (arr) {
+			free(arr);
+			arr = nullptr;
+			cout << "free" << endl;
+		}
 	}
 private:
 	int b;
+	int* arr;
 };
 class A {
 public:
-	A() {
-		a = 1;
-	}
+	A()
+		: a(1)
+		, b(2)
+	{}
 	void show() {
 		cout << "show()" << this->a << endl;
 	}
