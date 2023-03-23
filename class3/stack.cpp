@@ -52,14 +52,14 @@ private:
 	Node* _top;
 	Node* _bottom;
 };
-int main() {
-	Stack stack;
-	for (int i = 0; i < 5; i++)
-	{
-		stack.push(i);
-	}
-	stack.print();
-	cout << stack.pop() << endl;
-	stack.print();
-	return 0;
-}
+//int main() {
+//	Stack stack;
+//	for (int i = 0; i < 5; i++)
+//	{
+//		stack.push(i);
+//	}
+//	stack.print();
+//	cout << stack.pop() << endl;
+//	stack.print();
+//	return 0;
+//}
