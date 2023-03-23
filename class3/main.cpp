@@ -6,6 +6,12 @@ public:
 	B(int b) {
 		this->b = b;
 		arr = (int*)malloc(sizeof(int) * 5);
+		add();
+	}
+	B(B& b) {
+		this->b = b.b;
+		this->arr = (int*)malloc(sizeof(int) * 5);
+		memcpy(this->arr, b.arr, 5* sizeof(int));
 	}
 	~B() {
 		if (arr) {
@@ -13,6 +19,22 @@ public:
 			arr = nullptr;
 			cout << "free" << endl;
 		}
+	}
+	void add() {
+		for (int i = 0; i < 5; i++)
+		{
+			arr[i] = i;
+		}
+	}
+	void show() {
+		int* tmp = arr;
+		int size = 5;
+		while (size > 0) {
+			cout << *tmp << " ";
+			tmp++;
+			size--;
+		}
+		cout << endl;
 	}
 private:
 	int b;
@@ -27,7 +49,7 @@ public:
 	//~A() {
 	//}
 	void show() {
-		cout << "show()" << this->a << endl;
+		b.show();
 	}
 private:
 	int a;
@@ -35,6 +57,9 @@ private:
 };
 int main() {
 	A a;
+	a.show();
+	A a2(a);
+	a2.show();
 	return 0;
 
 }
