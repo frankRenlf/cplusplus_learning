@@ -9,12 +9,12 @@ public:
 		arr = (int*)malloc(sizeof(int) * 5);
 		add();
 	}
-	//B(B& b) {
-	//	this->b = b.b;
-	//	this->arr = (int*)malloc(sizeof(int) * 5);
-	//	assert(this->arr);
-	//	memcpy(this->arr, b.arr, 5* sizeof(int));
-	//}
+	B(B& b) {
+		this->b = b.b;
+		this->arr = (int*)malloc(sizeof(int) * 5);
+		assert(this->arr);
+		memcpy(this->arr, b.arr, 5* sizeof(int));
+	}
 	~B() {
 		if (arr) {
 			free(arr);
@@ -38,7 +38,7 @@ public:
 		}
 		cout << endl;
 	}
-private:
+//private:
 	int b;
 	int* arr;
 };
@@ -53,15 +53,21 @@ public:
 	void show() {
 		b.show();
 	}
-private:
+//private:
 	int a;
 	B b;
 };
+bool operator==(const B& b1, const B& b2) {
+	bool k = 0;
+	return b1.b == b2.b
+		&& b1.arr == b2.arr;
+}
 int main() {
 	A a;
-	a.show();
+	//a.show();
 	A a2(a);
-	a2.show();
+	//a2.show();
+	cout << (a.b == a2.b) << endl;
 	return 0;
 
 }
