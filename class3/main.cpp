@@ -9,12 +9,12 @@ public:
 		arr = (int*)malloc(sizeof(int) * 5);
 		add();
 	}
-	B(B& b) {
-		this->b = b.b;
-		this->arr = (int*)malloc(sizeof(int) * 5);
-		assert(this->arr);
-		memcpy(this->arr, b.arr, 5* sizeof(int));
-	}
+	//B(B& b) {
+	//	this->b = b.b;
+	//	this->arr = (int*)malloc(sizeof(int) * 5);
+	//	assert(this->arr);
+	//	memcpy(this->arr, b.arr, 5* sizeof(int));
+	//}
 	~B() {
 		if (arr) {
 			free(arr);
