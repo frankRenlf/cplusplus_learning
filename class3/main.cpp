@@ -13,7 +13,7 @@ public:
 		this->b = b.b;
 		this->arr = (int*)malloc(sizeof(int) * 5);
 		assert(this->arr);
-		memcpy(this->arr, b.arr, 5* sizeof(int));
+		memcpy(this->arr, b.arr, 5 * sizeof(int));
 	}
 	~B() {
 		if (arr) {
@@ -21,6 +21,25 @@ public:
 			arr = nullptr;
 			cout << "free" << endl;
 		}
+	}
+	bool operator==(const B& b2) {
+		bool k = true;
+		for (int i = 0; i < 5; i++)
+		{
+			if (arr[i] != b2.arr[i])
+			{
+				k = false;
+			}
+		}
+		return b == b2.b
+			&& k;
+	}
+	B& operator=(const B& b2) {
+		this->b = b2.b;
+		this->arr = (int*)malloc(sizeof(int) * 5);
+		assert(this->arr);
+		memcpy(this->arr, b2.arr, 5 * sizeof(int));
+		return *this;
 	}
 	void add() {
 		for (int i = 0; i < 5; i++)
@@ -38,36 +57,41 @@ public:
 		}
 		cout << endl;
 	}
-//private:
+private:
 	int b;
 	int* arr;
 };
 class A {
 public:
-	A()
-		: a(1)
-		, b(2)
+	A(int val)
+		: a(val)
+		, b(val)
 	{}
-	//~A() {
-	//}
+	~A() {
+	}
+	bool operator==(const A& a1) {
+		return a == a1.a
+			&& b == a1.b;
+	}
 	void show() {
 		b.show();
 	}
-//private:
+private:
 	int a;
 	B b;
 };
-bool operator==(const B& b1, const B& b2) {
-	bool k = 0;
-	return b1.b == b2.b
-		&& b1.arr == b2.arr;
-}
+
 int main() {
-	A a;
+	A a(1);
 	//a.show();
 	A a2(a);
 	//a2.show();
-	cout << (a.b == a2.b) << endl;
+	cout << (a == a2) << endl;
+	A a3(3);
+	A a4(4);
+	a3 = a4;	
+	cout << (a3 == a4) << endl;
+
 	return 0;
 
 }
