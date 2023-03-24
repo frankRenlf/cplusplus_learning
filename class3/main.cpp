@@ -35,6 +35,9 @@ public:
 			&& k;
 	}
 	B& operator=(const B& b2) {
+		if (this == &b2) {
+			return *this;
+		}
 		this->b = b2.b;
 		this->arr = (int*)malloc(sizeof(int) * 5);
 		assert(this->arr);
@@ -57,7 +60,7 @@ public:
 		}
 		cout << endl;
 	}
-private:
+//private:
 	int b;
 	int* arr;
 };
@@ -76,7 +79,7 @@ public:
 	void show() {
 		b.show();
 	}
-private:
+//private:
 	int a;
 	B b;
 };
@@ -89,6 +92,7 @@ int main() {
 	cout << (a == a2) << endl;
 	A a3(3);
 	A a4(4);
+	a4.b.arr[0] = 2;
 	a3 = a4;	
 	cout << (a3 == a4) << endl;
 
