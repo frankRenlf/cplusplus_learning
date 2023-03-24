@@ -84,18 +84,18 @@ public:
 	B b;
 };
 
-int main() {
-	A a(1);
-	//a.show();
-	A a2(a);
-	//a2.show();
-	cout << (a == a2) << endl;
-	A a3(3);
-	A a4(4);
-	a4.b.arr[0] = 2;
-	a3 = a4;	
-	cout << (a3 == a4) << endl;
-
-	return 0;
-
-}
+//int main() {
+//	A a(1);
+//	//a.show();
+//	A a2(a);
+//	//a2.show();
+//	cout << (a == a2) << endl;
+//	A a3(3);
+//	A a4(4);
+//	a4.b.arr[0] = 2;
+//	a3 = a4;	
+//	cout << (a3 == a4) << endl;
+//
+//	return 0;
+//
+//}
