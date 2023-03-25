@@ -27,9 +27,11 @@ public:
 	// 赋值运算符重载
 	// d2 = d3 -> d2.operator=(&d2, d3)
 	Date& operator=(const Date& d) {
-		this->_year = d._year;
-		this->_month = d._month;
-		this->_day = d._day;
+		if (this != &d) {
+			this->_year = d._year;
+			this->_month = d._month;
+			this->_day = d._day;
+		}
 		return *this;
 	}
 	// 析构函数
@@ -38,7 +40,7 @@ public:
 	}
 
 	// check
-	void format();
+	void format(Date* tmp);
 	// 闰年
 	// 获取某年某月的天数
 	int GetMonthDay(int year, int month);
@@ -47,26 +49,28 @@ public:
 	}
 	// 日期+天数
 	Date operator+(int day) {
-		this->_day += day;
-		format();
-		return *this;
+		Date tmp(*this);
+		tmp._day += day;
+		format(&tmp);
+		return tmp;
 	}
 	// 日期-天数
 	Date operator-(int day) {
-		this->_day -= day;
-		format();
-		return *this;
+		Date tmp(*this);
+		tmp._day -= day;
+		format(&tmp);
+		return tmp;
 	}
 	// 日期+=天数
 	Date& operator+=(int day) {
 		this->_day += day;
-		format();
+		format(this);
 		return *this;
 	}
 	// 日期-=天数
 	Date& operator-=(int day) {
 		this->_day -= day;
-		format();
+		format(this);
 		return *this;
 	}
 	// 前置++
@@ -78,7 +82,7 @@ public:
 	Date operator++(int) {
 		Date tmp(*this);
 		this->_day++;
-		format();
+		format(this);
 		return tmp;
 	}
 	// 前置--
@@ -90,7 +94,7 @@ public:
 	Date operator--(int) {
 		Date tmp(*this);
 		this->_day--;
-		format();
+		format(this);
 		return tmp;
 	}
 

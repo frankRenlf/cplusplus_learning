@@ -10,25 +10,25 @@ int Date::GetMonthDay(int year, int month)
 	}
 	return day;
 }
-void Date::format() {
-	int limitDay = this->GetMonthDay(this->_year, this->_month);
-	while (this->_day > limitDay) {
-		this->_day -= limitDay;
-		this->_month++;
-		if (this->_month > 12) {
-			this->_month -= 12;
-			this->_year++;
+void Date::format(Date* tmp) {
+	int limitDay = tmp->GetMonthDay(tmp->_year, tmp->_month);
+	while (tmp->_day > limitDay) {
+		tmp->_day -= limitDay;
+		tmp->_month++;
+		if (tmp->_month > 12) {
+			tmp->_month -= 12;
+			tmp->_year++;
 		}
-		limitDay = this->GetMonthDay(this->_year, this->_month);
+		limitDay = tmp->GetMonthDay(tmp->_year, tmp->_month);
 	}
-	while (this->_day <= 0) {
-		this->_month--;
-		if (this->_month == 0) {
-			this->_month = 12;
-			this->_year--;
+	while (tmp->_day <= 0) {
+		tmp->_month--;
+		if (tmp->_month == 0) {
+			tmp->_month = 12;
+			tmp->_year--;
 		}
-		limitDay = this->GetMonthDay(this->_year, this->_month);
-		this->_day += limitDay;
+		limitDay = tmp->GetMonthDay(tmp->_year, tmp->_month);
+		tmp->_day += limitDay;
 	}
 }
 int Date::operator-(const Date& d) {
@@ -43,7 +43,7 @@ int main() {
 	Date d1(2, 2, 28);
 	Date d2(2, 3, 30);
 	//d2 += 90;
-	d2 -= 29;
+	d2 = d1 - 60;
 	cout << (d1 >= d2) << endl;
 	return 0;
 }
