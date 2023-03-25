@@ -1,7 +1,9 @@
 #include<iostream>
 #include <vector>
 #include <cassert>
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 class Date
 {
 public:
@@ -45,46 +47,131 @@ public:
 	~Date() {
 
 	}
-	// 日期+=天数
-	Date& operator+=(int day);
+
+	// check
+	void format() {
+		int limitDay = this->GetMonthDay(this->_year, this->_month);
+		while (this->_day > limitDay) {
+			this->_day -= limitDay;
+			this->_month++;
+			if (this->_month > 12) {
+				this->_month -= 12;
+				this->_year++;
+			}
+			limitDay = this->GetMonthDay(this->_year, this->_month);
+		}
+		while (this->_day <= 0) {
+			if (this->_month == 1) {
+				this->_month = 12;
+				this->_year--;
+			}
+			else {
+				this->_month--;
+			}
+			limitDay = this->GetMonthDay(this->_year, this->_month);
+			this->_day += limitDay;
+		}
+	}
 	// 日期+天数
-	Date operator+(int day);
+	Date operator+(int day) {
+		this->_day += day;
+		format();
+		return *this;
+	}
 	// 日期-天数
-	Date operator-(int day);
+	Date operator-(int day) {
+		this->_day -= day;
+		format();
+		return *this;
+	}
+	// 日期+=天数
+	Date& operator+=(int day) {
+		this->_day += day;
+		format();
+		return *this;
+	}
 	// 日期-=天数
-	Date& operator-=(int day);
+	Date& operator-=(int day) {
+		this->_day -= day;
+		format();
+		return *this;
+	}
 	// 前置++
-	Date& operator++();
+	Date& operator++() {
+		(*this) += 1;
+		return *this;
+	}
 	// 后置++
-	Date operator++(int);
-	// 后置--
-	Date operator--(int);
+	Date operator++(int) {
+		Date tmp(*this);
+		this->_day++;
+		format();
+		return tmp;
+	}
 	// 前置--
-	Date& operator--();
+	Date& operator--() {
+		(*this) -= 1;
+		return *this;
+	}
+	// 后置--
+	Date operator--(int) {
+		Date tmp(*this);
+		this->_day--;
+		format();
+		return tmp;
+	}
+
 
 	// >运算符重载
-	bool operator>(const Date& d);
+	bool operator>(const Date& d) {
+		return !((*this) <= d);
+	}
 	// ==运算符重载
-	bool operator==(const Date& d);
+	bool operator==(const Date& d) {
+		return this->_year == d._year
+			&& this->_month == d._month
+			&& this->_day == d._day;
+	}
 	// >=运算符重载
-	bool operator >= (const Date& d);
+	bool operator >= (const Date& d) {
+		return !((*this) < d);
+	}
 
 	// <运算符重载
-	bool operator < (const Date& d);
+	bool operator < (const Date& d) {
+		if ((this->_year < d._year)
+			|| (this->_year == d._year && this->_month < d._month)
+			|| (this->_year == d._year && this->_month == d._month && this->_day < d._day)) {
+			return true;
+		}
+		return false;
+	}
 	// <=运算符重载
-	bool operator <= (const Date& d);
+	bool operator <= (const Date& d) {
+		return (*this) < d || (*this) == d;
+	}
 	// !=运算符重载
-	bool operator != (const Date& d);
+	bool operator != (const Date& d) {
+		return !((*this) == d);
+	}
 	// 日期-日期 返回天数
-	int operator-(const Date& d);
+	int operator-(const Date& d) {
+		this->_year -= d._year;
+		this->_month -= d._month;
+		while (this->_month <= 0) {
+			this->_year--;
+		}
+	}
 private:
 	int _year;
 	int _month;
 	int _day;
 };
 int main() {
-	Date d1(1);
-	Date d2(2);
-	d1 = d2;
+	Date d1(2, 2, 28);
+	Date d2(2, 3, 30);
+	//d2 += 90;
+	d2 -= 30;
+	cout << (d1 >= d2) << endl;
 	return 0;
 }
