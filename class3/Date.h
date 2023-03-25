@@ -8,9 +8,6 @@ using std::endl;
 class Date
 {
 public:
-	// 闰年
-	// 获取某年某月的天数
-	int GetMonthDay(int year, int month);
 
 	// 全缺省的构造函数
 	Date(int year = 1900, int month = 1, int day = 1) {
@@ -42,6 +39,12 @@ public:
 
 	// check
 	void format();
+	// 闰年
+	// 获取某年某月的天数
+	int GetMonthDay(int year, int month);
+	void print() {
+		cout << _year << "-" << _month << "-" << _day << endl;
+	}
 	// 日期+天数
 	Date operator+(int day) {
 		this->_day += day;
