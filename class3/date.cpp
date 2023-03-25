@@ -41,10 +41,10 @@ int Date::operator-(const Date& d) {
 }
 int main() {
 	Date d1(2, 2, 28);
-	Date d2(2022, 5, 18);
-	d2 -= -10000;
-	d2.print();
-	d2 += -10000;
-	d2.print();
+	Date d2(2022, 5, 31);
+	Date d3 = d2++;
+	Date d4 = ++d2;
+	d3.print();
+	d4.print();
 	return 0;
 }
