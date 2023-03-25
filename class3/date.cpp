@@ -22,12 +22,10 @@ void Date::format() {
 		limitDay = this->GetMonthDay(this->_year, this->_month);
 	}
 	while (this->_day <= 0) {
-		if (this->_month == 1) {
+		this->_month--;
+		if (this->_month == 0) {
 			this->_month = 12;
 			this->_year--;
-		}
-		else {
-			this->_month--;
 		}
 		limitDay = this->GetMonthDay(this->_year, this->_month);
 		this->_day += limitDay;
