@@ -44,6 +44,7 @@ int main() {
 	Date d2(2, 3, 30);
 	//d2 += 90;
 	d2 = d1 - 60;
+	Date d3(d2);
 	cout << (d1 >= d2) << endl;
 	return 0;
 }
