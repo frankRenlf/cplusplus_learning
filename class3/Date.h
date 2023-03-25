@@ -69,7 +69,7 @@ public:
 	}
 	// 日期-=天数
 	Date& operator-=(int day) {
-		this->_day -= day;
+		this->_day -= day;     
 		format(this);
 		return *this;
 	}
