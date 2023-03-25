@@ -7,6 +7,7 @@ using std::endl;
 class Date
 {
 public:
+	// 闰年
 	// 获取某年某月的天数
 	int GetMonthDay(int year, int month)
 	{
