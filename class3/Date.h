@@ -44,7 +44,8 @@ public:
 	// 闰年
 	// 获取某年某月的天数
 	int GetMonthDay(int year, int month);
-	void print() {
+
+	void print() const {
 		cout << _year << "-" << _month << "-" << _day << endl;
 	}
 	// 日期+天数
@@ -69,7 +70,7 @@ public:
 	}
 	// 日期-=天数
 	Date& operator-=(int day) {
-		this->_day -= day;     
+		this->_day -= day;
 		format(this);
 		return *this;
 	}

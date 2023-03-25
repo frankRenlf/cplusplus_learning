@@ -31,20 +31,23 @@ void Date::format(Date* tmp) {
 		tmp->_day += limitDay;
 	}
 }
+void print(const Date& d) {
+	d.print();
+}
 int Date::operator-(const Date& d) {
-	this->_year -= d._year;
-	this->_month -= d._month;
-	while (this->_month <= 0) {
-		this->_year--;
+	int k = *this >= d ? 1 : -1;
+	Date d1(*this >= d ? *this : d);
+	Date d2(*this < d ? *this : d);
+	int sub = 0;
+	while (d1 > d2) {
+		sub++;
+		d2++;
 	}
-	return 0;
+	return sub * k;
 }
 int main() {
-	Date d1(2, 2, 28);
-	Date d2(2022, 5, 31);
-	Date d3 = d2++;
-	Date d4 = ++d2;
-	d3.print();
-	d4.print();
+	Date d1(2023, 3, 25);  
+	Date d2(2024, 1, 1);
+	cout << d1 - d2 << endl;
 	return 0;
 }
