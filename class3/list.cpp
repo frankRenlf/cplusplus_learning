@@ -12,6 +12,13 @@ public:
 		tail = head;
 		_size = 0;
 	}
+	~list() {
+		Node* tmp = head;
+		while (tmp != nullptr) {
+			Node* nt = tmp->next;
+			delete tmp;
+		}
+	}
 	void add(int val) {
 		;
 		tail->next = new Node(val);
@@ -29,7 +36,7 @@ private:
 			, next(nullptr)
 		{}
 		~Node() {
-			delete this;
+			free(this);
 		}
 	//private:
 		int _val;
