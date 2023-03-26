@@ -54,11 +54,11 @@ std::istream& operator>>(std::istream& in, Date& const d) {
 	in >> d._year >> d._month >> d._day;
 	return in;
 }
-int main() {
-	Date d1(2023, 3, 25);
-	Date d2(2024, 1, 1);
-	cout << d1 << " " << d2 << endl;
-	cin >> d2;
-	cout << d2;
-	return 0;
-}
+//int main() {
+//	Date d1(2023, 3, 25);
+//	Date d2(2024, 1, 1);
+//	cout << d1 << " " << d2 << endl;
+//	cin >> d2;
+//	cout << d2;
+//	return 0;
+//}
