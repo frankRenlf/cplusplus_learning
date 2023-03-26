@@ -10,7 +10,7 @@ int Date::GetMonthDay(int year, int month)
 	}
 	return day;
 }
-void Date::format(Date* tmp) {
+void Date::format(Date* const tmp) {
 	int limitDay = tmp->GetMonthDay(tmp->_year, tmp->_month);
 	while (tmp->_day > limitDay) {
 		tmp->_day -= limitDay;

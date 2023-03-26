@@ -40,7 +40,7 @@ public:
 	}
 
 	// check
-	void format(Date* tmp);
+	void format(Date* const tmp);
 	// 闰年
 	// 获取某年某月的天数
 	int GetMonthDay(int year, int month);
