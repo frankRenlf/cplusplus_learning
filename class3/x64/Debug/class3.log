@@ -1,2 +1,4 @@
 ﻿  date.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class3\Date.h(140,65): warning C4227: 使用了记时错误: 忽略引用上的限定符
+C:\Users\11195\source\repos\cplusplus_learning\class3\date.cpp(53,57): warning C4227: 使用了记时错误: 忽略引用上的限定符
   class3.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class3\x64\Debug\class3.exe

@@ -137,7 +137,7 @@ public:
 
 	// stream overwrite
 	friend std::ostream& operator<<(std::ostream& out, const Date& d);
-	friend std::istream& operator>>(std::istream& in, Date& d);
+	friend std::istream& operator>>(std::istream& in, Date& const d);
 private:
 	int _year;
 	int _month;

@@ -47,15 +47,18 @@ int Date::operator-(const Date& d) {
 	return sub * k;
 }
 std::ostream& operator<<(std::ostream& out, const Date& d) {
-	out << d._year << "-" << d._month << "-" << d._day << endl;
+	out << d._year << "-" << d._month << "-" << d._day;
 	return out;
 }
-std::istream& operator>>(std::istream& in, const Date& d) {
+std::istream& operator>>(std::istream& in, Date& const d) {
+	in >> d._year >> d._month >> d._day;
 	return in;
 }
 int main() {
 	Date d1(2023, 3, 25);
 	Date d2(2024, 1, 1);
-	cout << d1 << endl;
+	cout << d1 << " " << d2 << endl;
+	cin >> d2;
+	cout << d2;
 	return 0;
 }
