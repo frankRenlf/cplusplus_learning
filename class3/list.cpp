@@ -15,8 +15,9 @@ public:
 	~list() {
 		Node* tmp = head;
 		while (tmp != nullptr) {
-			Node* nt = tmp->next;
-			delete tmp;
+			Node* nt = tmp;
+			tmp = tmp->next;
+			delete nt;
 		}
 	}
 	void add(int val) {
@@ -35,10 +36,8 @@ private:
 			:_val(val)
 			, next(nullptr)
 		{}
-		~Node() {
-			free(this);
-		}
-	//private:
+
+		//private:
 		int _val;
 		Node* next;
 	};
@@ -46,9 +45,10 @@ private:
 	Node* tail;
 	int _size;
 };
-//int main() {
-//	list l;
-//	l.add(1);
-//	l.add(2);
-//	return 0;
-//}
+int main() {
+	list l;
+	l.add(1);
+	l.add(2);
+	list l2(l);
+	return 0;
+}
