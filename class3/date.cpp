@@ -49,5 +49,6 @@ int main() {
 	Date d1(2023, 3, 25);  
 	Date d2(2024, 1, 1);
 	cout << d1 - d2 << endl;
+	d2.print();
 	return 0;
 }
