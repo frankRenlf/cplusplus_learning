@@ -34,6 +34,7 @@ void Date::format(Date* const tmp) {
 void print(const Date& d) {
 	d.print();
 }
+
 int Date::operator-(const Date& d) {
 	int k = *this >= d ? 1 : -1;
 	Date d1(*this >= d ? *this : d);
@@ -45,9 +46,16 @@ int Date::operator-(const Date& d) {
 	}
 	return sub * k;
 }
+std::ostream& operator<<(std::ostream& out, const Date& d) {
+	out << d._year << "-" << d._month << "-" << d._day << endl;
+	return out;
+}
+std::istream& operator>>(std::istream& in, const Date& d) {
+	return in;
+}
 int main() {
-	Date d1(2023, 3, 25);  
+	Date d1(2023, 3, 25);
 	Date d2(2024, 1, 1);
-	cout << d1 <<endl;
+	cout << d1 << endl;
 	return 0;
 }

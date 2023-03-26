@@ -136,12 +136,8 @@ public:
 	int operator-(const Date& d);
 
 	// stream overwrite
-	std::ostream& operator<<(std::ostream& out) {
-		out << _year << "-" << _month << "-" << _day << endl;
-	}
-	std::istream& operator>>(std::istream& in) {
-		cin >> _year;
-	}
+	friend std::ostream& operator<<(std::ostream& out, const Date& d);
+	friend std::istream& operator>>(std::istream& in, Date& d);
 private:
 	int _year;
 	int _month;
