@@ -49,7 +49,7 @@ public:
 		cout << _year << "-" << _month << "-" << _day << endl;
 	}
 	// 日期+天数
-	Date operator+(int day){
+	Date operator+(int day) {
 		Date tmp(*this);
 		tmp._day += day;
 		format(&tmp);
@@ -134,6 +134,14 @@ public:
 	}
 	// 日期-日期 返回天数
 	int operator-(const Date& d);
+
+	// stream overwrite
+	std::ostream& operator<<(std::ostream& out) {
+		out << _year << "-" << _month << "-" << _day << endl;
+	}
+	std::istream& operator>>(std::istream& in) {
+		cin >> _year;
+	}
 private:
 	int _year;
 	int _month;
