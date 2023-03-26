@@ -49,7 +49,7 @@ public:
 		cout << _year << "-" << _month << "-" << _day << endl;
 	}
 	// 日期+天数
-	Date operator+(int day) {
+	Date operator+(int day){
 		Date tmp(*this);
 		tmp._day += day;
 		format(&tmp);
