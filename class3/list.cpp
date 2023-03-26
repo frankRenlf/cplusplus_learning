@@ -45,10 +45,10 @@ private:
 	Node* tail;
 	int _size;
 };
-int main() {
-	list l;
-	l.add(1);
-	l.add(2);
-	list l2(l);
-	return 0;
-}
+//int main() {
+//	list l;
+//	l.add(1);
+//	l.add(2);
+//	list l2(l);
+//	return 0;
+//}

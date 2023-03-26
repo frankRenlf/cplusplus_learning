@@ -40,7 +40,7 @@ public:
 	}
 
 	// check
-	void format(Date* const tmp);
+	void format(Date* const tmp)const;
 	// 闰年
 	// 获取某年某月的天数
 	int GetMonthDay(int year, int month);
@@ -49,14 +49,14 @@ public:
 		cout << _year << "-" << _month << "-" << _day << endl;
 	}
 	// 日期+天数
-	Date operator+(int day) {
+	Date operator+(int day) const {
 		Date tmp(*this);
 		tmp._day += day;
 		format(&tmp);
 		return tmp;
 	}
 	// 日期-天数
-	Date operator-(int day) {
+	Date operator-(int day) const {
 		Date tmp(*this);
 		tmp._day -= day;
 		format(&tmp);
@@ -101,22 +101,22 @@ public:
 
 
 	// >运算符重载
-	bool operator>(const Date& d) {
+	bool operator>(const Date& d) const {
 		return !((*this) <= d);
 	}
 	// ==运算符重载
-	bool operator==(const Date& d) {
+	bool operator==(const Date& d)const {
 		return this->_year == d._year
 			&& this->_month == d._month
 			&& this->_day == d._day;
 	}
 	// >=运算符重载
-	bool operator >= (const Date& d) {
+	bool operator >= (const Date& d) const {
 		return !((*this) < d);
 	}
 
 	// <运算符重载
-	bool operator < (const Date& d) {
+	bool operator < (const Date& d) const {
 		if ((this->_year < d._year)
 			|| (this->_year == d._year && this->_month < d._month)
 			|| (this->_year == d._year && this->_month == d._month && this->_day < d._day)) {
@@ -125,15 +125,15 @@ public:
 		return false;
 	}
 	// <=运算符重载
-	bool operator <= (const Date& d) {
+	bool operator <= (const Date& d)const {
 		return (*this) < d || (*this) == d;
 	}
 	// !=运算符重载
-	bool operator != (const Date& d) {
+	bool operator != (const Date& d) const {
 		return !((*this) == d);
 	}
 	// 日期-日期 返回天数
-	int operator-(const Date& d);
+	int operator-(const Date& d)const;
 
 	// stream overwrite
 	friend std::ostream& operator<<(std::ostream& out, const Date& d);
