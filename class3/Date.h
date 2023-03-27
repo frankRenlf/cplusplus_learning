@@ -7,6 +7,9 @@ using std::cin;
 using std::endl;
 class Date
 {
+	// stream overwrite
+	friend std::ostream& operator<<(std::ostream& out, const Date& d);
+	friend std::istream& operator>>(std::istream& in, Date& const d);
 public:
 
 	// 全缺省的构造函数
@@ -135,9 +138,6 @@ public:
 	// 日期-日期 返回天数
 	int operator-(const Date& d)const;
 
-	// stream overwrite
-	friend std::ostream& operator<<(std::ostream& out, const Date& d);
-	friend std::istream& operator>>(std::istream& in, Date& const d);
 private:
 	int _year;
 	int _month;
