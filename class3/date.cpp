@@ -54,6 +54,7 @@ std::istream& operator>>(std::istream& in, Date& const d) {
 	in >> d._year >> d._month >> d._day;
 	return in;
 }
+
 int main() {
 	Date d1(2023, 3, 25);
 	Date d2(2024, 1, 1);
