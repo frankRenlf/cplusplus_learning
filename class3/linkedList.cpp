@@ -4,8 +4,6 @@ class LinkedList {
 public:
 	LinkedList() {
 		pre = new ListNode(-1); // 这里定义的头结点 是一个虚拟头结点，而不是真正的链表头结点
-		head = pre->next;
-		tail = head;
 		_size = 0;
 	}
 	void Print() {
@@ -16,9 +14,18 @@ public:
 		}
 		cout << endl;
 	}
+	~LinkedList() {
+		ListNode* cur = pre;
+		while (cur != nullptr) {
+			ListNode* tmp = cur;
+			cur = cur->next;
+			delete tmp;
+		}
+	}
 	void insert(int val) {
 		if (tail == nullptr) {
 			head = tail = new ListNode(val);
+			pre->next = head;
 		}
 		else {
 			tail->next = new ListNode(val);
@@ -45,12 +52,12 @@ private:
 //	cout << b << endl;
 //
 //}
-//int main() {
-//	LinkedList p;
-//	for (int i = 0; i < 10; i++)
-//	{
-//		p.insert(i);
-//	}
-//	p.Print();
-//	return 0;
-//}
+int main() {
+	LinkedList p;
+	for (int i = 0; i < 10; i++)
+	{
+		p.insert(i);
+	}
+	p.Print();
+	return 0;
+}
