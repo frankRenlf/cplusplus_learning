@@ -4,6 +4,8 @@ class LinkedList {
 public:
 	LinkedList() {
 		pre = new ListNode(-1); // 这里定义的头结点 是一个虚拟头结点，而不是真正的链表头结点
+		head = nullptr;
+		tail = nullptr;
 		_size = 0;
 	}
 	void Print() {
@@ -43,7 +45,7 @@ private:
 	ListNode* head;
 	ListNode* pre;
 	ListNode* tail;
-	int _size = 0;
+	int _size;
 };
 //int main() {
 //	int* a = NULL;
