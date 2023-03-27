@@ -35,11 +35,11 @@ public:
 		}
 		_size++;
 	}
-	struct ListNode {
+	class ListNode {
+	public:
+		ListNode(int val) :val(val), next(nullptr) {}
 		int val;
 		ListNode* next;
-		ListNode(int val) :val(val), next(nullptr) {
-		}
 	};
 private:
 	ListNode* head;
@@ -55,11 +55,14 @@ private:
 //
 //}
 int main() {
-	LinkedList p;
+	LinkedList* p = new LinkedList;
 	for (int i = 0; i < 10; i++)
 	{
-		p.insert(i);
+		p->insert(i);
 	}
-	p.Print();
+	p->Print();
+	// 将该函数放在main函数之后，每次程序退出的时候就会检测是否存在内存泄漏
+	delete p;
+	cout << _CrtDumpMemoryLeaks() <<endl;;
 	return 0;
 }
