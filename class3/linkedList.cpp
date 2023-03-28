@@ -2,7 +2,6 @@
 #include<vector>
 using namespace std;
 template<class T>
-vector<int> v;
 class LinkedList {
 public:
 	LinkedList() {
@@ -74,5 +73,7 @@ int main() {
 	catch (exception& e) {
 		cout << e.what() << endl;
 	}
+	vector<int> v;
+
 	return 0;
 }  
