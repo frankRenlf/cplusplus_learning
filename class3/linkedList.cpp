@@ -40,7 +40,7 @@ public:
 	public:
 		ListNode(T val) :val(val), next(nullptr) {}
 		ListNode() :val(), next(nullptr) {}
-		~ListNode(){}
+		~ListNode() {}
 		T val;
 		ListNode* next;
 	};
@@ -61,11 +61,16 @@ int main() {
 	LinkedList<int>* p = new LinkedList<int>;
 	for (double i = 0.0; i < 10.0; i++)
 	{
-		p->insert(i+1.2);
+		p->insert(i + 1.2);
 	}
 	p->Print();
 	// 将该函数放在main函数之后，每次程序退出的时候就会检测是否存在内存泄漏
 	delete p;
-	cout << _CrtDumpMemoryLeaks() <<endl;;
+	try {
+		_CrtDumpMemoryLeaks();
+	}
+	catch (exception& e) {
+		cout << e.what() << endl;
+	}
 	return 0;
 }
