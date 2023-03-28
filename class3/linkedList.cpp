@@ -1,9 +1,10 @@
 #include<iostream>
 using namespace std;
+template<class T>
 class LinkedList {
 public:
 	LinkedList() {
-		pre = new ListNode(-1); // 这里定义的头结点 是一个虚拟头结点，而不是真正的链表头结点
+		pre = new ListNode(); // 这里定义的头结点 是一个虚拟头结点，而不是真正的链表头结点
 		head = nullptr;
 		tail = nullptr;
 		_size = 0;
@@ -24,7 +25,7 @@ public:
 			delete tmp;
 		}
 	}
-	void insert(int val) {
+	void insert(T val) {
 		if (tail == nullptr) {
 			head = tail = new ListNode(val);
 			pre->next = head;
@@ -37,9 +38,10 @@ public:
 	}
 	class ListNode {
 	public:
-		ListNode(int val) :val(val), next(nullptr) {}
+		ListNode(T val) :val(val), next(nullptr) {}
+		ListNode() :val(), next(nullptr) {}
 		~ListNode(){}
-		int val;
+		T val;
 		ListNode* next;
 	};
 private:
@@ -56,10 +58,10 @@ private:
 //
 //}
 int main() {
-	LinkedList* p = new LinkedList;
-	for (int i = 0; i < 10; i++)
+	LinkedList<int>* p = new LinkedList<int>;
+	for (double i = 0.0; i < 10.0; i++)
 	{
-		p->insert(i);
+		p->insert(i+1.2);
 	}
 	p->Print();
 	// 将该函数放在main函数之后，每次程序退出的时候就会检测是否存在内存泄漏
