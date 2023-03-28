@@ -1,5 +1,5 @@
 ﻿  linkedList.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class3\linkedList.cpp(65,15): warning C4244: “参数”: 从“double”转换到“T”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class3\linkedList.cpp(65,15): warning C4244: “参数”: 从“double”转换到“const T”，可能丢失数据
           with
           [
               T=int

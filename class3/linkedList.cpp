@@ -26,7 +26,7 @@ public:
 			delete tmp;
 		}
 	}
-	void insert(T val) {
+	void insert(const T& val) {
 		if (tail == nullptr) {
 			head = tail = new ListNode(val);
 			pre->next = head;
