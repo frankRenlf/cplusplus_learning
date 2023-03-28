@@ -1,6 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 template<class T>
+vector<int> v;
 class LinkedList {
 public:
 	LinkedList() {
@@ -73,4 +75,4 @@ int main() {
 		cout << e.what() << endl;
 	}
 	return 0;
-}
+}  
