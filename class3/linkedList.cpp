@@ -38,6 +38,7 @@ public:
 	class ListNode {
 	public:
 		ListNode(int val) :val(val), next(nullptr) {}
+		~ListNode(){}
 		int val;
 		ListNode* next;
 	};
