@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\main.cpp(7,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe
