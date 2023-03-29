@@ -34,6 +34,7 @@ int main() {
 		cout << *iter << endl;
 		iter++;
 	}
-	cout << s->at(5) << endl;
+	(*s) += "abc";
+	cout << *s << endl;
 	return 0;
 }
