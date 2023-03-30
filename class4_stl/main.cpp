@@ -25,13 +25,11 @@ public:
 };
 
 int main() {
-	string* s = new string("123"); 
-	string::iterator it = s->end() - 1;
-	for (;; it--)
-	{
-		cout << *it << endl;
-		if (it == s->begin())break;
-	}
 
+	string s1("123");
+	string s2("abc");
+	s1.swap(s2);
+	swap(s1, s2);
+	cout << s1 << " " << s2 << endl;
 	return 0;
 }
