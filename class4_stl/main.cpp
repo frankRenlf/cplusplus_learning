@@ -25,20 +25,12 @@ public:
 };
 
 int main() {
-	string* s = new string("123");
-	cout << s << ": " << *s << endl;
-	reverse(s->begin(), s->end());
-	cout << *s << endl;
-	string::iterator iter = s->begin();
-	while (iter != s->end()) {
-		cout << *iter << endl;
-		iter++;
-	}
-	(*s) += "abc";
-	cout << *s << endl;
-	while (!s->empty()) {
-		cout << s->back() << " ";
-		s->pop_back();
+	string* s = new string("123"); 
+	string::iterator it = s->end() - 1;
+	for (;; it--)
+	{
+		cout << *it << endl;
+		if (it == s->begin())break;
 	}
 
 	return 0;
