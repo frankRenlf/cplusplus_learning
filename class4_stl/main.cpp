@@ -40,5 +40,6 @@ int main() {
 		cout << s->back() << " ";
 		s->pop_back();
 	}
+
 	return 0;
 }
