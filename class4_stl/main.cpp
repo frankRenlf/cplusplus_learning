@@ -36,5 +36,9 @@ int main() {
 	}
 	(*s) += "abc";
 	cout << *s << endl;
+	while (!s->empty()) {
+		cout << s->back() << " ";
+		s->pop_back();
+	}
 	return 0;
 }
