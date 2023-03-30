@@ -28,8 +28,11 @@ int main() {
 
 	string s1("123");
 	string s2("abc");
-	s1.swap(s2);
-	swap(s1, s2);
+	//s1.swap(s2);
+	//swap(s1, s2);
+	string tmp = s1;
+	s1 = s2;
+	s2 = tmp;
 	cout << s1 << " " << s2 << endl;
 	return 0;
 }
