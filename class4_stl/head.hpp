@@ -59,11 +59,11 @@ public:
 		return s;
 	}
 	char firstUniqChar(string s) {
-		char arr[26]{0};
+		int arr[26] = { 0 };
 		int length = s.size();
-		for (size_t i = 0; i < length; i++)
+		for (auto ch : s)
 		{
-			arr[s[i] - 'a']++;
+			arr[ch - 'a']++;
 		}
 		for (size_t i = 0; i < length; i++)
 		{
