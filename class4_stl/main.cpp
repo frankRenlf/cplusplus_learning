@@ -36,5 +36,12 @@ int main() {
 	cout << s << endl;
 	string s2(s);
 	cout << s2.size() << endl;
+	size_t pos = s2.find("ce");
+	if (pos != string::npos) {
+		cout << s2.substr(pos);
+	}
+	else {
+		cout << "fail" << endl;
+	}
 	return 0;
 }
