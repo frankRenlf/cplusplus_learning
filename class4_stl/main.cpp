@@ -27,12 +27,14 @@ public:
 int main() {
 
 	string s1("123");
-	string s2("abc");
-	//s1.swap(s2);
-	//swap(s1, s2);
-	string tmp = s1;
-	s1 = s2;
-	s2 = tmp;
-	cout << s1 << " " << s2 << endl;
+	char* s = new char[5] {'a', 'b', 'c', 'd', '\0'};
+	cout << strlen(s) << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		s[i] += i;
+	}
+	cout << s << endl;
+	string s2(s);
+	cout << s2.size() << endl;
 	return 0;
 }
