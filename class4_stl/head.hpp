@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-
+#include<map>
 using namespace std;
 class Solution {
 public:
@@ -57,5 +57,18 @@ public:
 			}
 		}
 		return s;
+	}
+	char firstUniqChar(string s) {
+		char arr[26]{0};
+		int length = s.size();
+		for (size_t i = 0; i < length; i++)
+		{
+			arr[s[i] - 'a']++;
+		}
+		for (size_t i = 0; i < length; i++)
+		{
+			if (arr[s[i] - 'a'] == 1)return s[i];
+		}
+		return ' ';
 	}
 };
