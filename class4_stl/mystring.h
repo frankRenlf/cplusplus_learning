@@ -71,8 +71,8 @@ namespace frank {
 		friend istream& operator>>(istream& _cin, frank::string& s);
 	private:
 		char* _str;
-		size_t _capacity;
 		size_t _size;
+		size_t _capacity;
 	};
 
 	ostream& operator<<(ostream& _cout, const frank::string& s)
