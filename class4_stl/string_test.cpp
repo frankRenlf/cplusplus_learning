@@ -24,5 +24,6 @@
 int main() {
 	frank::string s1("123");
 	frank::string s2(s1);
+	frank::string s3 = s2;
 	return 0;
 }

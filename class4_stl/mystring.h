@@ -9,8 +9,8 @@ namespace frank {
 	class string {
 	public:
 		string(const char* str = "")
+			: _size(strlen(str))
 		{
-			_size = strlen(str);
 			_capacity = _size;
 			_str = new char[_capacity + 1];
 			strcpy(_str, str);
@@ -30,6 +30,14 @@ namespace frank {
 				delete[] _str;
 				_str = nullptr;
 			}
+		}
+
+		string& operator=(const string& s) {
+			if (this != &s) {
+				string tmp(s._str);
+				this->swap(tmp);
+			}
+			return *this;
 		}
 
 		size_t size()const
