@@ -28,7 +28,7 @@ namespace frank {
 			assert(index < _size);
 			return _str[index];
 		}
-		char& operator[](size_t index)const
+		const char& operator[](size_t index)const
 		{
 			assert(index < _size);
 			return _str[index];
@@ -53,7 +53,7 @@ namespace frank {
 		}
 		return _cout;
 	}
-	istream& operator>>(istream& _cin, const frank::string& s)
+	istream& operator>>(istream& _cin, frank::string& s)
 	{
 		// 不能使用这个, 因为string的字符串内部可能会包含\0
 		// 直接cout时, 是将_str当成char*打印的，遇到内部的\0时后序内容就不打印了

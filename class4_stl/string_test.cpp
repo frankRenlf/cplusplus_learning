@@ -26,5 +26,7 @@ int main() {
 	cout << s << endl;
 	s[2] = 'a';
 	cout << s[2] << endl;
+	cin >> s;
+	cout << s << endl;
 	return 0;
 }
