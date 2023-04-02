@@ -23,17 +23,9 @@
 //	return 0;
 //}
 void test1() {
-	frank::string s1;
-	s1.push_back('a');
-	s1.push_back('b');
-	s1.push_back('c');
-	s1.push_back('d');
-	cout << s1 << endl;
-	s1 += "welcome";
-	frank::string s2("mine 11234");
-	s1 += s2;
-	s1.resize(25, 'x');
-	cout << s1 << " " << s1.size() << endl;
+	frank::string s1("bcadf");
+	frank::string s2("bcade");
+	cout << (s1 <= s2) << " " << endl;
 }
 int main() {
 	test1();
