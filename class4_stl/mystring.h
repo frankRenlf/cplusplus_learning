@@ -22,6 +22,7 @@ namespace frank {
 			, _capacity(0)
 		{
 			string tmp(s._str);
+			tmp._capacity = s._capacity;
 			this->swap(tmp);
 		}
 
@@ -29,6 +30,25 @@ namespace frank {
 			if (_str) {
 				delete[] _str;
 				_str = nullptr;
+			}
+		}
+
+		bool checkCapacity() {
+			return !(_size == _capacity);
+		}
+
+		void reserve(size_t newCapacity)
+		{
+			// 如果新容量大于旧容量，则开辟空间
+			if (newCapacity > _capacity)
+			{
+				char* str = new char[newCapacity + 1];
+				strcpy(str, _str);
+
+				// 释放原来旧空间,然后使用新空间
+				delete[] _str;
+				_str = str;
+				_capacity = newCapacity;
 			}
 		}
 
@@ -51,6 +71,11 @@ namespace frank {
 		size_t size()const
 		{
 			return _size;
+		}
+
+		size_t capacity()const
+		{
+			return _capacity;
 		}
 
 		void swap(string& s)
