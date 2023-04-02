@@ -24,5 +24,7 @@
 int main() {
 	frank::string s("123");
 	cout << s << endl;
+	s[2] = 'a';
+	cout << s[2] << endl;
 	return 0;
 }
