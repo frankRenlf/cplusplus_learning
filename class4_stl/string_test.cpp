@@ -23,7 +23,6 @@
 //}
 int main() {
 	frank::string s("123");
-	cin >> s;
 	cout << s << endl;
 	return 0;
 }
