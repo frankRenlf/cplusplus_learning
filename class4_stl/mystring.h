@@ -32,6 +32,10 @@ namespace frank {
 			}
 		}
 
+		bool empty() {
+			return _size == 0;
+		}
+
 		string& operator=(const string& s) {
 			if (this != &s) {
 				string tmp(s._str);
