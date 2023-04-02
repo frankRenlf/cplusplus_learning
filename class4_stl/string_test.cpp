@@ -22,11 +22,7 @@
 //	return 0;
 //}
 int main() {
-	frank::string s("123");
-	cout << s << endl;
-	s[2] = 'a';
-	cout << s[2] << endl;
-	cin >> s;
-	cout << s << endl;
+	frank::string s1("123");
+	frank::string s2(s1);
 	return 0;
 }
