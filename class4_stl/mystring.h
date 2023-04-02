@@ -36,6 +36,10 @@ namespace frank {
 			if (this != &s) {
 				string tmp(s._str);
 				this->swap(tmp);
+				//_capacity = _size = s._capacity;
+				//delete[] _str;
+				//_str = new char[_capacity + 1];
+				//strcpy(_str, s._str);
 			}
 			return *this;
 		}
