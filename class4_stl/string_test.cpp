@@ -25,10 +25,12 @@
 void test1() {
 	frank::string s1("123");
 	s1.push_back('a');
-	s1.push_back('b');	
+	s1.push_back('b');
 	s1.push_back('c');
 	s1.push_back('d');
 	cout << s1 << endl;
+	s1 += "welcome";
+	cout << s1 << " " << s1.size() << endl;
 }
 int main() {
 	test1();

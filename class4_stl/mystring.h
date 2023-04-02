@@ -33,12 +33,30 @@ namespace frank {
 			}
 		}
 
+		string& operator+=(char ch) {
+			push_back(ch);
+			return *this;
+		}
+		string& operator+=(const char* str) {
+			append(str);
+			return *this;
+		}
+
 		void push_back(char ch) {
 			if (checkSaturation()) {
 				reserve(_capacity * 2);
 			}
 			_str[_size++] = ch;
 			_str[_size] = '\0';
+		}
+
+		void append(const char* s) {
+			size_t sum = strlen(s) + _size;
+			if (sum > _capacity) {
+				reserve(sum);
+			}
+			strcpy(_str + _size, s);
+			_size = sum;
 		}
 
 		bool checkSaturation() {
