@@ -1,7 +1,10 @@
 #pragma once
 #include<iostream>
 #include <cassert>
-using namespace std;
+using std::cout;
+using std::endl;
+using std::ostream;
+using std::istream;
 namespace frank {
 	class string {
 	public:
