@@ -30,6 +30,8 @@ void test1() {
 	s1.push_back('d');
 	cout << s1 << endl;
 	s1 += "welcome";
+	frank::string s2("mine 11234");
+	s1 += s2;
 	cout << s1 << " " << s1.size() << endl;
 }
 int main() {

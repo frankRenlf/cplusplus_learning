@@ -41,6 +41,10 @@ namespace frank {
 			append(str);
 			return *this;
 		}
+		string& operator+=(const string& str) {
+			append(str._str);
+			return *this;
+		}
 
 		void push_back(char ch) {
 			if (checkSaturation()) {
