@@ -30,7 +30,8 @@ void test1() {
 }
 int main() {
 	test1();
-
+	frank::string s1("123");
+	s1.~string();
 	cout << _CrtDumpMemoryLeaks() << endl;
 	return 0;
 }
