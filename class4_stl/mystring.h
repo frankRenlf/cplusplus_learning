@@ -10,8 +10,8 @@ namespace frank {
 	public:
 		string(const char* str = "")
 			: _size(strlen(str))
+			, _capacity(_size)
 		{
-			_capacity = _size;
 			_str = new char[_capacity + 1];
 			strcpy(_str, str);
 		}
