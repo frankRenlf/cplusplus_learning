@@ -23,7 +23,7 @@
 //	return 0;
 //}
 void test1() {
-	frank::string s1("123");
+	frank::string s1;
 	s1.push_back('a');
 	s1.push_back('b');
 	s1.push_back('c');
@@ -32,6 +32,7 @@ void test1() {
 	s1 += "welcome";
 	frank::string s2("mine 11234");
 	s1 += s2;
+	s1.resize(25, 'x');
 	cout << s1 << " " << s1.size() << endl;
 }
 int main() {

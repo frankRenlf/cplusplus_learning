@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include <cassert>
+#define DEFAULT_SIZE 4
 using std::cout;
 using std::endl;
 using std::ostream;
@@ -47,8 +48,8 @@ namespace frank {
 		}
 
 		void push_back(char ch) {
-			if (checkSaturation()) {
-				reserve(_capacity * 2);
+			if (_size == _capacity) {
+				reserve(_capacity == 0 ? DEFAULT_SIZE : _capacity * 2);
 			}
 			_str[_size++] = ch;
 			_str[_size] = '\0';
@@ -56,17 +57,21 @@ namespace frank {
 
 		void append(const char* s) {
 			size_t sum = strlen(s) + _size;
-			if (sum > _capacity) {
-				reserve(sum);
-			}
+			reserve(sum);
 			strcpy(_str + _size, s);
 			_size = sum;
 		}
-
-		bool checkSaturation() {
-			return _size == _capacity;
+		void resize(size_t n, char ch = '\0') {
+			if (n > _capacity) {
+				reserve(n);
+			}
+			for (size_t i = _size; i < n; i++)
+			{
+				_str[i] = ch;
+			}
+			_size = n;
+			_str[_size] = '\0';
 		}
-
 		void reserve(size_t newCapacity)
 		{
 			// 如果新容量大于旧容量，则开辟空间
