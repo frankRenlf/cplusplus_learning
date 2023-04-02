@@ -1,9 +1,9 @@
-#include"head.hpp"
+#include"head.h"
 #include<cstring>
 
-int main() {
-	Solution s;
-	/*cout << s.reverseWords("Let's take LeetCode contest");*/
-	cout << s.firstUniqChar("z");
-	return 0;
-}
+//int main() {
+//	Solution s;
+//	/*cout << s.reverseWords("Let's take LeetCode contest");*/
+//	cout << s.firstUniqChar("z");
+//	return 0;
+//}

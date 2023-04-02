@@ -1,4 +1,4 @@
-#include"head.hpp"
+#include"mystring.h"
 
 //int main() {
 //
@@ -21,3 +21,9 @@
 //	}
 //	return 0;
 //}
+int main() {
+	frank::string s("123");
+	cin >> s;
+	cout << s << endl;
+	return 0;
+}
