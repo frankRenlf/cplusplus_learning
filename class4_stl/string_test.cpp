@@ -24,9 +24,11 @@
 //}
 void test1() {
 	frank::string s1("123");
-	frank::string s2(s1);
-	frank::string s3;
-	s3 = s2;
+	s1.push_back('a');
+	s1.push_back('b');	
+	s1.push_back('c');
+	s1.push_back('d');
+	cout << s1 << endl;
 }
 int main() {
 	test1();

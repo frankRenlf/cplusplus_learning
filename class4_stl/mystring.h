@@ -33,8 +33,16 @@ namespace frank {
 			}
 		}
 
-		bool checkCapacity() {
-			return !(_size == _capacity);
+		void push_back(char ch) {
+			if (checkSaturation()) {
+				reserve(_capacity * 2);
+			}
+			_str[_size++] = ch;
+			_str[_size] = '\0';
+		}
+
+		bool checkSaturation() {
+			return _size == _capacity;
 		}
 
 		void reserve(size_t newCapacity)
