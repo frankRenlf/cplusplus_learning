@@ -1,4 +1,5 @@
 #include"mystring.h"
+#include"other_string.h"
 
 //int main() {
 //
@@ -21,9 +22,15 @@
 //	}
 //	return 0;
 //}
-int main() {
+void test1() {
 	frank::string s1("123");
 	frank::string s2(s1);
-	frank::string s3 = s2;
+	frank::string s3;
+	s3 = s2;
+}
+int main() {
+	test1();
+
+	cout << _CrtDumpMemoryLeaks() << endl;
 	return 0;
 }

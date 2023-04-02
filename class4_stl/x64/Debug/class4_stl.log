@@ -1,2 +1,4 @@
 ﻿  string_test.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\other_string.h(1,1): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\other_string.h(1,1): message : 之前在命令行上声明的“_CRT_SECURE_NO_WARNINGS”
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe
