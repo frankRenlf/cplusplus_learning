@@ -176,9 +176,7 @@ namespace frank {
 		// 在pos位置上插入字符c/字符串str，并返回该字符的位置
 		string& insert(size_t pos, char c) {
 			assert(pos <= _size);
-			if (_size == _capacity) {
-				reserve(_capacity == 0 ? DEFAULT_SIZE : _capacity * 2);
-			}
+			reserve(_size + 1);
 			size_t end = _size + 1;
 			while (end > pos) {
 				_str[end] = _str[end - 1];
@@ -191,9 +189,7 @@ namespace frank {
 		string& insert(size_t pos, const char* str) {
 			assert(pos <= _size);
 			size_t len = strlen(str);
-			if (_size == _capacity) {
-				reserve(_capacity == 0 ? len : _capacity + len);
-			}
+			reserve(_size + len);
 			int end = _size + len;
 			while (end > pos) {
 				_str[end] = _str[end - len];
