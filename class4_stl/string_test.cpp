@@ -26,14 +26,11 @@ void test1() {
 	frank::string s1("bcadf");
 	frank::string s2("bcade");
 	cout << (s1 <= s2) << " " << endl;
-	frank::string::iterator iter = s1.begin();
-	while (iter != s1.end()) {
-		cout << *iter << " ";
-		iter++;
+
+	for (auto& ch : s2) {
+		ch++;
 	}
-	for (auto ch : s2) {
-		cout << ch;
-	}
+	cout << s2 << endl;
 }
 int main() {
 	test1();

@@ -10,6 +10,7 @@ namespace frank {
 	class string {
 	public:
 		typedef char* iterator;
+		typedef const char* const_iterator;
 
 		string(const char* str = "")
 			: _size(strlen(str))
@@ -52,13 +53,13 @@ namespace frank {
 		iterator begin() {
 			return _str;
 		}
-		iterator begin()const {
+		const_iterator begin()const {
 			return _str;
 		}
 		iterator end() {
 			return _str + _size;
 		}
-		iterator end()const {
+		const_iterator end()const {
 			return _str + _size;
 		}
 
