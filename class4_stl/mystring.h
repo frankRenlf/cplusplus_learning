@@ -189,6 +189,7 @@ namespace frank {
 		string& insert(size_t pos, const char* str) {
 			assert(pos <= _size);
 			size_t len = strlen(str);
+			if (len == 0)return *this;
 			reserve(_size + len);
 			int end = _size + len;
 			while (end > pos) {
@@ -201,7 +202,16 @@ namespace frank {
 		}
 
 		// 删除pos位置上的元素，并返回该元素的下一个位置
-		string& erase(size_t pos, size_t len);
+		string& erase(size_t pos, size_t len = npos) {
+			if (len >= npos || pos + len >= _size) {
+				_str[pos] = '\0';
+				_size = pos;
+				return *this;
+			}
+			strncpy(_str + pos, _str + pos + len, len);
+			_size -= len;
+			return *this;
+		}
 	private:
 		friend ostream& operator<<(ostream& _cout, const frank::string& s);
 		friend istream& operator>>(istream& _cin, frank::string& s);
@@ -209,7 +219,9 @@ namespace frank {
 		char* _str;
 		size_t _size;
 		size_t _capacity;
+		const static size_t npos;
 	};
+	const size_t string::npos = -1;
 
 	ostream& operator<<(ostream& _cout, const frank::string& s)
 	{
