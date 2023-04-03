@@ -203,6 +203,7 @@ namespace frank {
 
 		// 删除pos位置上的元素，并返回该元素的下一个位置
 		string& erase(size_t pos, size_t len = npos) {
+			assert(pos < _size);
 			if (len >= npos || pos + len >= _size) {
 				_str[pos] = '\0';
 				_size = pos;
