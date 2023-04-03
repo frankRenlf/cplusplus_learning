@@ -24,13 +24,9 @@
 //}
 void test1() {
 	frank::string s1("bcadf");
-	frank::string s2("bcade");
-	cout << (s1 <= s2) << " " << endl;
-
-	for (auto& ch : s2) {
-		ch++;
-	}
-	cout << s2 << endl;
+	s1.insert(5, 'x');
+	cout << s1 << endl;
+	cout << s1.size() << endl;
 }
 int main() {
 	test1();
