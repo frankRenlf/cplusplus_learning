@@ -24,12 +24,9 @@
 //}
 void test1() {
 	frank::string s1("012345678");
-	cout << s1 << "#" << endl;
-	s1.erase(2, 2);
-	cout << s1 << "#" << endl;
-	cout << s1.size() << endl;
-	cout << s1.find('7') << endl;
-	cout << s1.find("0",0) << endl;
+	frank::string s2;
+	cin >> s2;
+	cout << s2 << endl;
 }
 int main() {
 	test1();

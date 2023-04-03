@@ -246,9 +246,11 @@ namespace frank {
 		// 不能使用这个, 因为string的字符串内部可能会包含\0
 		// 直接cout时, 是将_str当成char*打印的，遇到内部的\0时后序内容就不打印了
 		//cout << s._str;
-		for (size_t i = 0; i < s.size(); ++i)
+		char ch = _cin.get();
+		while (ch != ' ' && ch != '\n')
 		{
-			_cin >> s[i];
+			s += ch;
+			ch = _cin.get();
 		}
 		return _cin;
 	}
