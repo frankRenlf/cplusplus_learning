@@ -179,9 +179,9 @@ namespace frank {
 			if (_size == _capacity) {
 				reserve(_capacity == 0 ? DEFAULT_SIZE : _capacity * 2);
 			}
-			int end = _size;
-			while (end >= pos) {
-				_str[end + 1] = _str[end];
+			size_t end = _size + 1;
+			while (end > pos) {
+				_str[end] = _str[end - 1];
 				end--;
 			}
 			_str[pos] = c;
@@ -194,12 +194,14 @@ namespace frank {
 			if (_size == _capacity) {
 				reserve(_capacity == 0 ? len : _capacity + len);
 			}
-			int end = _size;
-			while (end >= pos) {
-				_str[end + len] = _str[end];
+			int end = _size + len;
+			while (end > pos) {
+				_str[end] = _str[end - len];
 				end--;
 			}
+			char c = _str[pos + len];
 			strcpy(_str + pos, str);
+			_str[pos + len] = c;
 			_size += len;
 			return *this;
 		}
