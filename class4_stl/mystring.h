@@ -175,10 +175,8 @@ namespace frank {
 		// 返回子串s在string中第一次出现的位置
 		size_t find(const char* s, size_t pos = 0) const {
 			assert(pos < _size&& pos >= 0);
-			while (pos < _size && strncmp(_str + pos, s, strlen(s))) {
-				pos++;
-			}
-			return pos == _size ? npos : pos;
+			const char* p = strstr(_str + pos, s);
+			return p == nullptr ? npos : p - _str;
 		}
 
 		// 在pos位置上插入字符c/字符串str，并返回该字符的位置

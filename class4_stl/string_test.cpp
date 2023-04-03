@@ -29,7 +29,7 @@ void test1() {
 	cout << s1 << "#" << endl;
 	cout << s1.size() << endl;
 	cout << s1.find('7') << endl;
-	cout << s1.find("1456",2) << endl;
+	cout << s1.find("0",0) << endl;
 }
 int main() {
 	test1();
