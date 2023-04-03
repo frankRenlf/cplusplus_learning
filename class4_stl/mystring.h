@@ -247,11 +247,19 @@ namespace frank {
 		// 直接cout时, 是将_str当成char*打印的，遇到内部的\0时后序内容就不打印了
 		//cout << s._str;
 		char ch = _cin.get();
+		char buff[128] = { '\0' };
+		size_t i = 0;
 		while (ch != ' ' && ch != '\n')
 		{
-			s += ch;
+			buff[i++] = ch;
+			if (i == 127) {
+				s += buff;
+				memset(buff, '\0', 128);
+				i = 0;
+			}
 			ch = _cin.get();
 		}
+		s += buff;
 		return _cin;
 	}
 }
