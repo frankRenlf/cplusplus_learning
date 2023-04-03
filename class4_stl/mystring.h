@@ -52,7 +52,13 @@ namespace frank {
 		iterator begin() {
 			return _str;
 		}
+		iterator begin()const {
+			return _str;
+		}
 		iterator end() {
+			return _str + _size;
+		}
+		iterator end()const {
 			return _str + _size;
 		}
 
