@@ -24,8 +24,8 @@
 //}
 void test1() {
 	frank::string s1("bcadf");
-	s1.insert(5, 'x');
-	cout << s1 << endl;
+	s1.insert(1, "xyz");
+	cout << s1 <<"#" << endl;
 	cout << s1.size() << endl;
 }
 int main() {

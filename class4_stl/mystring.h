@@ -179,7 +179,7 @@ namespace frank {
 			if (_size == _capacity) {
 				reserve(_capacity == 0 ? DEFAULT_SIZE : _capacity * 2);
 			}
-			size_t end = _size;
+			int end = _size;
 			while (end >= pos) {
 				_str[end + 1] = _str[end];
 				end--;
@@ -189,7 +189,19 @@ namespace frank {
 			return *this;
 		}
 		string& insert(size_t pos, const char* str) {
-
+			assert(pos <= _size);
+			size_t len = strlen(str);
+			if (_size == _capacity) {
+				reserve(_capacity == 0 ? len : _capacity + len);
+			}
+			int end = _size;
+			while (end >= pos) {
+				_str[end + len] = _str[end];
+				end--;
+			}
+			strcpy(_str + pos, str);
+			_size += len;
+			return *this;
 		}
 
 		// 删除pos位置上的元素，并返回该元素的下一个位置
