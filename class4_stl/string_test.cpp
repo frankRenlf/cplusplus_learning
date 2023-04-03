@@ -23,11 +23,9 @@
 //	return 0;
 //}
 void test1() {
-	frank::string s1("bcadf");
-	s1.insert(0, 'x');
-	s1.insert(0, "www");
+	frank::string s1("012345678");
 	cout << s1 << "#" << endl;
-	s1.erase(5);
+	s1.erase(2,2);
 	cout << s1 << "#" << endl;
 	cout << s1.size() << endl;
 }

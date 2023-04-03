@@ -208,7 +208,7 @@ namespace frank {
 				_size = pos;
 				return *this;
 			}
-			strncpy(_str + pos, _str + pos + len, len);
+			strcpy(_str + pos, _str + pos + len);
 			_size -= len;
 			return *this;
 		}
