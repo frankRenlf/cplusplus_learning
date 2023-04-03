@@ -9,6 +9,8 @@ using std::istream;
 namespace frank {
 	class string {
 	public:
+		typedef char* iterator;
+
 		string(const char* str = "")
 			: _size(strlen(str))
 			, _capacity(_size)
@@ -45,6 +47,13 @@ namespace frank {
 		string& operator+=(const string& str) {
 			append(str._str);
 			return *this;
+		}
+
+		iterator begin() {
+			return _str;
+		}
+		iterator end() {
+			return _str + _size;
 		}
 
 		void push_back(char ch) {
