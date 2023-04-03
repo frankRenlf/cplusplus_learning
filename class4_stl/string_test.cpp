@@ -28,6 +28,8 @@ void test1() {
 	s1.erase(2, 2);
 	cout << s1 << "#" << endl;
 	cout << s1.size() << endl;
+	cout << s1.find('7') << endl;
+	cout << s1.find("1456",2) << endl;
 }
 int main() {
 	test1();
