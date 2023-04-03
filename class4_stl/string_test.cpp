@@ -25,7 +25,7 @@
 void test1() {
 	frank::string s1("bcadf");
 	s1.insert(0, 'x');
-	s1.insert(6, "www");
+	s1.insert(0, "www");
 	cout << s1 <<"#" << endl;
 	cout << s1.size() << endl;
 }

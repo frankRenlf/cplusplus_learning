@@ -195,9 +195,7 @@ namespace frank {
 				_str[end] = _str[end - len];
 				end--;
 			}
-			char c = _str[pos + len];
-			strcpy(_str + pos, str);
-			_str[pos + len] = c;
+			strncpy(_str + pos, str, len);
 			_size += len;
 			return *this;
 		}
