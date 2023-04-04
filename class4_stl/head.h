@@ -74,4 +74,40 @@ public:
 		}
 		return ' ';
 	}
+	vector<vector<int>> generate(int numRows) {
+		vector<vector<int>> v;
+		for (size_t i = 0; i < numRows; i++)
+		{
+			vector<int> el;
+			for (size_t j = 0; j <= i; j++)
+			{
+				if (i >= 1) {
+					if (j >= 1 && j < i) {
+						el.push_back(v[i - 1][j - 1] + v[i - 1][j]);
+					}
+					else {
+						el.push_back(1);
+					}
+				}
+				else {
+					el.push_back(1);
+				}
+			}
+			v.push_back(el);
+		}
+		return v;
+	}
+	int removeDuplicates(vector<int>& nums) {
+		int len = nums.size();
+		if (len <= 1)return len;
+		auto iter = nums.begin() + 1;
+		while (iter != nums.end()) {
+			if (*(iter - 1) == *iter) {
+				nums.erase(iter);
+			}
+			else {
+				iter++;
+			}
+		}
+	}
 };

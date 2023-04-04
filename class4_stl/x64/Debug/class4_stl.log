@@ -1,14 +1,7 @@
-﻿  leetcode.cpp
+﻿  vector_test.cpp
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(11,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(30,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(37,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(44,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(66,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  vector_test.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(11,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(30,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(37,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(44,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(66,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  正在生成代码...
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe
