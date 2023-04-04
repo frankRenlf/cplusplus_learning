@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="leetcode.cpp" />
     <ClCompile Include="string_test.cpp" />
+    <ClCompile Include="vector_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h" />

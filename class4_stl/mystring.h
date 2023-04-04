@@ -220,7 +220,7 @@ namespace frank {
 			return *this;
 		}
 		void clear() {
-			_str = '\0';
+			_str[0] = '\0';
 			_size = 0;
 		}
 	private:
