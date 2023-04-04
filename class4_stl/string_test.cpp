@@ -28,9 +28,9 @@ void test1() {
 	cin >> s2;
 	cout << s2 << endl;
 }
-int main() {
-	test1();
-	cout << endl;
-	cout << _CrtDumpMemoryLeaks() << endl;
-	return 0;
-}
+//int main() {
+//	test1();
+//	cout << endl;
+//	cout << _CrtDumpMemoryLeaks() << endl;
+//	return 0;
+//}

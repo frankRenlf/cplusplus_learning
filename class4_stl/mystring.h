@@ -219,6 +219,10 @@ namespace frank {
 			_size -= len;
 			return *this;
 		}
+		void clear() {
+			_str = '\0';
+			_size = 0;
+		}
 	private:
 		friend ostream& operator<<(ostream& _cout, const frank::string& s);
 		friend istream& operator>>(istream& _cin, frank::string& s);
@@ -246,6 +250,7 @@ namespace frank {
 		// 不能使用这个, 因为string的字符串内部可能会包含\0
 		// 直接cout时, 是将_str当成char*打印的，遇到内部的\0时后序内容就不打印了
 		//cout << s._str;
+		s.clear();
 		char ch = _cin.get();
 		char buff[128] = { '\0' };
 		size_t i = 0;
