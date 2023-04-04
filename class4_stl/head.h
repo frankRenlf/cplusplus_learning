@@ -97,6 +97,39 @@ public:
 		}
 		return v;
 	}
+	vector<vector<int>> generate2(int numRows) {
+		vector<vector<int>> v(numRows);
+		for (size_t i = 0; i < numRows; i++)
+		{
+			v[i].resize(i + 1, 1);
+			for (size_t j = 0; j <= i; j++)
+			{
+				if (i >= 1) {
+					if (j >= 1 && j < i) {
+						v[i][j] = v[i - 1][j - 1] + v[i - 1][j];
+					}
+					else {
+						v[i][j] = 1;
+					}
+				}
+				else {
+					v[i][j] = 1;
+				}
+			}
+		}
+		return v;
+	}
+	vector<vector<int>> generate3(int numRows) {
+		vector<vector<int>> ret(numRows);
+		for (int i = 0; i < numRows; ++i) {
+			ret[i].resize(i + 1);
+			ret[i][0] = ret[i][i] = 1;
+			for (int j = 1; j < i; ++j) {
+				ret[i][j] = ret[i - 1][j] + ret[i - 1][j - 1];
+			}
+		}
+		return ret;
+	}
 	int removeDuplicates(vector<int>& nums) {
 		int len = nums.size();
 		if (len <= 1)return len;
@@ -104,10 +137,12 @@ public:
 		while (iter != nums.end()) {
 			if (*(iter - 1) == *iter) {
 				nums.erase(iter);
+				len--;
 			}
 			else {
 				iter++;
 			}
 		}
+		return len;
 	}
 };

@@ -2,7 +2,7 @@
 
 int main() {
 	Solution s;
-	auto v = s.generate(5);
+	auto v = s.generate2(5);
 
 	return 0;
 }
