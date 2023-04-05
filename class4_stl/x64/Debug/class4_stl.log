@@ -6,4 +6,21 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(45,1): warning 
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(67,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(135,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(166,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(13,24): warning C4267: “参数”: 从“size_t”转换到“const T”，可能丢失数据
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.h(98,14): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.h(97): message : 在编译 类 模板 成员函数“int *frank::vector<int>::insert(int *,const T &)”时
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(13): message : 查看对正在编译的函数 模板 实例化“int *frank::vector<int>::insert(int *,const T &)”的引用
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(10): message : 查看对正在编译的 类 模板 实例化“frank::vector<int>”的引用
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

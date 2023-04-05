@@ -94,16 +94,19 @@ namespace frank {
 				reserve(newCapacity);
 			}
 		}
-		void insert(iterator pos, const T& val) {
+		iterator insert(iterator pos, const T& val) {
+			int index = pos - _start;
 			assert(pos >= _start && pos <= _finish);
 			check_expand();
 			iterator end = _finish + 1;
+			pos = _start + index;
 			while (end > pos) {
 				*end = *(end - 1);
 				end--;
 			}
 			*pos = val;
 			_finish++;
+			return pos;
 		}
 	private:
 		iterator _start;
