@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="head.h" />
     <ClInclude Include="mystring.h" />
+    <ClInclude Include="myvector.h" />
     <ClInclude Include="other_string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

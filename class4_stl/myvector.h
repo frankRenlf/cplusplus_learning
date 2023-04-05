@@ -12,7 +12,15 @@ namespace frank {
 	class vector {
 	public:
 		typedef T* iterator;
-		typedef const T* iterator;
+		typedef const T* const_iterator;
+
+		iterator begin() {
+			return _start;
+		}
+
+		iterator end() {
+			return _finish;
+		}
 
 		vector()
 			:_start(nullptr)
@@ -30,7 +38,17 @@ namespace frank {
 		}
 
 		void reserve(size_t newCapacity) {
-
+			size_t oldSize = size();
+			if (newCapacity > capacity()) {
+				T* tmp = new T[newCapacity];
+				if (_start) {
+					memcpy(tmp, _start, size() * sizeof(T));
+					delete[] _start;
+				}
+				_start = tmp;
+			}
+			_finish = _start + oldSize;
+			_endofstorage = _start + newCapacity;
 		}
 
 		void push_back(const T& x) {
@@ -40,6 +58,11 @@ namespace frank {
 			}
 			*_finish = x;
 			_finish++;
+		}
+
+		T& operator[](size_t index) {
+			assert(index < size());
+			return _start[index];
 		}
 
 	private:
