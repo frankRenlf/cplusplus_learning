@@ -4,6 +4,7 @@
 #include<vector>
 #include<algorithm>
 #include<functional>
+#include <unordered_map>
 using namespace std;
 class Solution {
 public:
@@ -145,4 +146,29 @@ public:
 		}
 		return len;
 	}
+	vector<string>& combinations;
+	unordered_map<char, string> phoneMap{
+		{'2', "abc"},
+		{'3', "def"},
+		{'4', "ghi"},
+		{'5', "jkl"},
+		{'6', "mno"},
+		{'7', "pqrs"},
+		{'8', "tuv"},
+		{'9', "wxyz"}
+	};
+	vector<string> letterCombinations(string digits) {
+		if (digits.empty()) {
+			return combinations;
+		}
+
+		string combination;
+		backtrack(phoneMap, digits, 0, combination);
+		return combinations;
+	}
+
+	void backtrack(const unordered_map<char, string>& phoneMap, const string& digits, int index, string& combination) {
+
+	}
+
 };
