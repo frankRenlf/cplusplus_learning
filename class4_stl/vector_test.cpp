@@ -1,7 +1,9 @@
 #include"head.h"
 #include"myvector.h"
 
-
+void test(string& s) {
+	s[0] = 'a';
+}
 int main() {
 	/*Solution s;
 	auto v = s.generate2(5);*/
@@ -11,7 +13,12 @@ int main() {
 	v.push_back(s);
 
 	s[1] = '5';
-	cout << &(v[0]) << endl;
-	cout << &(s) << endl;
+	v.push_back(s);
+	v.push_back(s);
+
+	for (frank::vector<string>::iterator i = v.begin(); i < v.end(); i++)
+	{
+		cout << *i << endl;
+	}
 	return 0;
 }
