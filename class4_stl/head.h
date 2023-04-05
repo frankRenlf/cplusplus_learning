@@ -146,7 +146,7 @@ public:
 		}
 		return len;
 	}
-	vector<string>& combinations;
+	vector<string> combinations;
 	unordered_map<char, string> phoneMap{
 		{'2', "abc"},
 		{'3', "def"},
@@ -163,12 +163,21 @@ public:
 		}
 
 		string combination;
-		backtrack(phoneMap, digits, 0, combination);
+		backtrack(digits, digits.size(), 0, combination);
 		return combinations;
 	}
 
-	void backtrack(const unordered_map<char, string>& phoneMap, const string& digits, int index, string& combination) {
-
+	void backtrack(const string& digits, int n, int index, string& combination) {
+		if (index == n) {
+			combinations.push_back(combination);
+			return;
+		}
+		char c = digits[index];
+		for (auto x : phoneMap[c]) {
+			combination.push_back(x);
+			backtrack(digits, n, index + 1, combination);
+			combination.pop_back();
+		}
 	}
 
 };
