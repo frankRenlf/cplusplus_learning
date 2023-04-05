@@ -58,11 +58,23 @@ namespace frank {
 			_endofstorage = _start + newCapacity;
 		}
 
-		void push_back(const T& x) {
-			if (_finish == _endofstorage) {
-				size_t newCapacity = capacity() == 0 ? 4 : capacity() * 2;
-				reserve(newCapacity);
+		void resize(size_t n, const T& val = T()) {
+			if (n > capacity()) {
+				reserve(n);
 			}
+			if (n > size()) {
+				while (_finish < _start + n) {
+					*_finish = val;
+					_finish++;
+				}
+			}
+			else {
+				_finish = _start + n;
+			}
+		}
+
+		void push_back(const T& x) {
+			check_expand();
 			*_finish = x;
 			_finish++;
 		}
@@ -76,7 +88,23 @@ namespace frank {
 			assert(index < size());
 			return _start[index];
 		}
-
+		void check_expand() {
+			if (_finish == _endofstorage) {
+				size_t newCapacity = capacity() == 0 ? 4 : capacity() * 2;
+				reserve(newCapacity);
+			}
+		}
+		void insert(iterator pos, const T& val) {
+			assert(pos >= _start && pos <= _finish);
+			check_expand();
+			iterator end = _finish + 1;
+			while (end > pos) {
+				*end = *(end - 1);
+				end--;
+			}
+			*pos = val;
+			_finish++;
+		}
 	private:
 		iterator _start;
 		iterator _finish;
