@@ -35,7 +35,7 @@
     <ClInclude Include="other_string.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="myvector.h">
+    <ClInclude Include="myvector.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
