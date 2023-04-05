@@ -8,20 +8,20 @@ int main() {
 	/*Solution s;
 	auto v = s.generate2(5);*/
 	frank::vector<int> v;
-	for (size_t i = 0; i < 50; i++)
+	for (size_t i = 0; i < 10; i++)
 	{
 		v.insert(v.begin(), i);
 	}
-	//for (frank::vector<int>::iterator i = v.begin(); i < v.end()+10; i++)
-	//{
-	//	if ((*i % 2) == 0) {
-	//		v.insert(i, 100);
-	//		//i++;
-	//	}
-	//}
 	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
 	{
-		cout << *i << endl;
+		if ((*i % 2) == 0) {
+			i = v.insert(i, 100);
+			i++;
+		}
+	}v.insert(v.end()-1, 999);
+	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
+	{
+		cout << *i << " ";
 	}
 	return 0;
 }

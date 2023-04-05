@@ -95,11 +95,12 @@ namespace frank {
 			}
 		}
 		iterator insert(iterator pos, const T& val) {
-			int index = pos - _start;
 			assert(pos >= _start && pos <= _finish);
+			size_t index = pos - _start;
 			check_expand();
-			iterator end = _finish + 1;
 			pos = _start + index;
+			iterator end = _finish;
+
 			while (end > pos) {
 				*end = *(end - 1);
 				end--;
