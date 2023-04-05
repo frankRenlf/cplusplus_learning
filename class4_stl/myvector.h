@@ -21,6 +21,13 @@ namespace frank {
 		iterator end() {
 			return _finish;
 		}
+		const_iterator begin()const {
+			return _start;
+		}
+
+		const_iterator end()const {
+			return _finish;
+		}
 
 		vector()
 			:_start(nullptr)
@@ -59,7 +66,12 @@ namespace frank {
 			*_finish = x;
 			_finish++;
 		}
-
+		void pop_back() {
+			if (_finish == _start) {
+				return;
+			}
+			_finish--;
+		}
 		T& operator[](size_t index) {
 			assert(index < size());
 			return _start[index];
