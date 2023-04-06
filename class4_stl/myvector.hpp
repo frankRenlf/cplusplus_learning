@@ -74,9 +74,9 @@ namespace frank {
 		// 重新声明迭代器，迭代器区间[first,last)可以是任意容器的迭代器
 		template<class InputIterator>
 		vector(InputIterator first, InputIterator last)
-			: _start(new T[n])
-			, _finish(_start + n)
-			, _endofstorage(_finish)
+			: _start(nullptr)
+			, _finish(nullptr)
+			, _endofstorage(nullptr)
 		{
 			while (first != last)
 			{
@@ -133,7 +133,7 @@ namespace frank {
 			if (newCapacity > capacity()) {
 				T* tmp = new T[newCapacity];
 				if (_start) {
-					memcpy(tmp, _start, size() * sizeof(T));
+					memcpy(tmp, _start, oldSize * sizeof(T));
 					delete[] _start;
 				}
 				_start = tmp;
