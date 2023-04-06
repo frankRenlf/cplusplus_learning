@@ -1,13 +1,11 @@
 #include"head.h"
 #include"myvector.hpp"
 
-void test(string& s) {
-	s[0] = 'a';
-}
-int main() {
+
+void test2() {
 	/*Solution s;
 	auto v = s.generate2(5);*/
-	std::vector<int> v;
+	frank::vector<int> v;
 	for (size_t i = 0; i < 10; i++)
 	{
 		v.insert(v.begin(), i);
@@ -26,5 +24,10 @@ int main() {
 	{
 		cout << *i << " ";
 	}
+	cout << endl;
+}
+int main() {
+	test2();
+	cout << _CrtDumpMemoryLeaks() << endl;
 	return 0;
 }
