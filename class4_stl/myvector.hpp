@@ -90,14 +90,8 @@ namespace frank {
 			, _finish(nullptr)
 			, _endofstorage(nullptr)
 		{
-			reserve(v.capacity());
-			iterator it = begin();
-			const_iterator vit = v.cbegin();
-			while (vit != v.cend())
-			{
-				*it++ = *vit++;
-			}
-			_finish = it;
+			vector<T> tmp(v.cbegin(), v.cend());
+			this->swap(tmp);
 		}
 
 		vector<T>& operator=(vector<T> v)

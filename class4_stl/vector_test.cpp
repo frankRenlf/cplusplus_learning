@@ -1,7 +1,14 @@
 #include"head.h"
 #include"myvector.hpp"
 
-
+template<class T>
+void print_vector(frank::vector<T>& v) {
+	for (auto i = v.begin(); i < v.end(); i++)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+}
 void test2() {
 	/*Solution s;
 	auto v = s.generate2(5);*/
@@ -11,22 +18,16 @@ void test2() {
 		v.insert(v.begin(), i);
 	}
 
-	for (auto i = v.begin(); i < v.end(); i++)
-	{
-		cout << *i << " ";
-	}
-	cout << endl;
+	print_vector(v);
 
-	frank::vector<int> v2(v.begin(), v.end()-5);
-	cout << (v2.end() - v2.begin()) << endl;
-	for (frank::vector<int>::iterator i = v2.begin(); i < v2.end(); i++)
-	{
-		cout << *i << " ";
-	}
+	frank::vector<int> v2(10, 5);
+	print_vector(v2);
+
+	v = v2;
+	print_vector(v);
 }
 int main() {
 	test2();
-	cout << endl;
 	cout << "leak? ";
 	cout << _CrtDumpMemoryLeaks() << endl;
 	return 0;
