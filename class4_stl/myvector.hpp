@@ -74,6 +74,9 @@ namespace frank {
 		// 重新声明迭代器，迭代器区间[first,last)可以是任意容器的迭代器
 		template<class InputIterator>
 		vector(InputIterator first, InputIterator last)
+			: _start(new T[n])
+			, _finish(_start + n)
+			, _endofstorage(_finish)
 		{
 			while (first != last)
 			{
@@ -171,6 +174,9 @@ namespace frank {
 			std::swap(_start, v._start);
 			std::swap(_finish, v._finish);
 			std::swap(_endofstorage, v._endofstorage);
+		}
+		void clear() {
+			_finish = _start;
 		}
 		///////////////////////////////////////////////////////////
 		// 元素访问
