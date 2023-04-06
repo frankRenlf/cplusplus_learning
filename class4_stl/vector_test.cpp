@@ -12,14 +12,14 @@ int main() {
 	{
 		v.insert(v.begin(), i);
 	}
-	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
-	{
-		if ((*i % 2) == 0) {
-			i = v.insert(i, 100);
-			i++;
-		}
-	}
-	v.insert(v.end(), 999);
+	//for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
+	//{
+	//	if ((*i % 2) == 0) {
+	//		i = v.insert(i, 100);
+	//		i++;
+	//	}
+	//}
+	v.erase(v.begin());
 	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
 	{
 		cout << *i << " ";

@@ -110,10 +110,10 @@ namespace frank {
 		}
 		iterator erase(iterator pos) {
 			assert(pos >= _start && pos <= _finish);
-			iterator end = _finish;
-			while (end > pos) {
-				*(end - 1) = *end;
-				end--;
+			iterator loc = pos;
+			while (loc < _finish) {
+				*(loc) = *(loc + 1);
+				loc++;
 			}
 			_finish--;
 			return pos;
