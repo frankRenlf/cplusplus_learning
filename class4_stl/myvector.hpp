@@ -9,7 +9,7 @@ using std::istream;
 namespace frank {
 	template<class T>
 	class vector {
-	public:
+	public: 
 		typedef T* iterator;
 		typedef const T* const_iterator;
 

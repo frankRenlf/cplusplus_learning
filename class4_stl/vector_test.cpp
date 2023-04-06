@@ -18,7 +18,8 @@ int main() {
 			i = v.insert(i, 100);
 			i++;
 		}
-	}v.insert(v.end(), 999);
+	}
+	v.insert(v.end(), 999);
 	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
 	{
 		cout << *i << " ";
