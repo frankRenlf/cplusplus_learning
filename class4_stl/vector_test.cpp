@@ -1,34 +1,8 @@
 #include"head.h"
 #include"myvector.hpp"
-
-template<class T>
-void print_vector(frank::vector<T>& v) {
-	for (auto i = v.begin(); i < v.end(); i++)
-	{
-		cout << *i << " ";
-	}
-	cout << endl;
-}
-void test2() {
-	/*Solution s;
-	auto v = s.generate2(5);*/
-	frank::vector<int> v;
-	for (size_t i = 0; i < 10; i++)
-	{
-		v.insert(v.begin(), i);
-	}
-
-	print_vector(v);
-
-	frank::vector<int> v2(10, 5);
-	print_vector(v2);
-
-	v = v2;
-	print_vector(v);
-}
-frank::vector<frank::vector<int>> generate(int numRows) {
-	frank::vector<frank::vector<int>> vv;
-	vv.resize(numRows);
+frank::vector<frank::vector<int>> generate2(int numRows) {
+	frank::vector<frank::vector<int>> vv(numRows);
+	//vv.resize(numRows);
 	for (int i = 0; i < numRows; ++i)
 	{
 		vv[i].resize(i + 1, 1);
@@ -50,9 +24,31 @@ frank::vector<frank::vector<int>> generate(int numRows) {
 	}
 	return vv;
 }
-int main() {
-	//test2();
-	frank::vector<frank::vector<int>> vv = generate(5);
+template<class T>
+void print_vector(frank::vector<T>& v) {
+	for (auto i = v.begin(); i < v.end(); i++)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+}
+void test2() {
+	/*Solution s;
+	auto v = s.generate2(5);*/
+	//frank::vector<int> v;
+	//for (size_t i = 0; i < 10; i++)
+	//{
+	//	v.insert(v.begin(), i);
+	//}
+
+	//print_vector(v);
+
+	//frank::vector<int> v2(10, 5);
+	//print_vector(v2);
+
+	//v = v2;
+	//print_vector(v);
+	frank::vector<frank::vector<int>> vv = generate2(5);
 	for (size_t i = 0; i < vv.size(); i++)
 	{
 		for (size_t j = 0; j < vv[i].size(); j++)
@@ -61,6 +57,11 @@ int main() {
 		}
 		cout << endl;
 	}
+}
+
+int main() {
+	test2();
+
 	cout << "leak? ";
 	cout << _CrtDumpMemoryLeaks() << endl;
 	return 0;

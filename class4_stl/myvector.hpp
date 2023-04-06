@@ -127,7 +127,8 @@ namespace frank {
 			if (newCapacity > capacity()) {
 				T* tmp = new T[newCapacity];
 				if (_start) {
-					memcpy(tmp, _start, oldSize * sizeof(T));
+					for (size_t i = 0; i < oldSize; ++i)
+						tmp[i] = _start[i];					
 					delete[] _start;
 				}
 				_start = tmp;
