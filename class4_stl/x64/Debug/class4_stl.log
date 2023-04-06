@@ -11,4 +11,25 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(18,24)
           [
               T=int
           ]
-  class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(93,1): error C2665: “frank::vector<int>::vector”: 4 个重载中没有一个可以转换所有参数类型
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(62,3): message : 可能是“frank::vector<int>::vector(int,const T &)”
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(39,3): message : 或    “frank::vector<int>::vector(size_t,const T &)”
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(93,17): message : “frank::vector<int>::vector(size_t,const T &)”: 无法将参数 1 从“const int *”转换为“size_t”
+          with
+          [
+              T=int
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(93,26): message : 没有使该转换得以执行的上下文
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(39,3): message : 参见“frank::vector<int>::vector”的声明
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(93,1): message : 尝试匹配参数列表“(const int *, const int *)”时
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\myvector.hpp(88): message : 在编译 类 模板 成员函数“frank::vector<int>::vector(const frank::vector<int> &)”时
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(26): message : 查看对正在编译的函数 模板 实例化“frank::vector<int>::vector(const frank::vector<int> &)”的引用
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(15): message : 查看对正在编译的 类 模板 实例化“frank::vector<int>”的引用
