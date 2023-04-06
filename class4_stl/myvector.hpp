@@ -72,18 +72,18 @@ namespace frank {
 
 		// 若使用iterator做迭代器，会导致初始化的迭代器区间[first,last)只能是vector的迭代器
 		// 重新声明迭代器，迭代器区间[first,last)可以是任意容器的迭代器
-		//template<class InputIterator>
-		//vector(InputIterator first, InputIterator last)
-		//	: _start(nullptr)
-		//	, _finish(nullptr)
-		//	, _endofstorage(nullptr)
-		//{
-		//	while (first != last)
-		//	{
-		//		push_back(*first);
-		//		++first;
-		//	}
-		//}
+		template<class InputIterator>
+		vector(InputIterator first, InputIterator last)
+			: _start(nullptr)
+			, _finish(nullptr)
+			, _endofstorage(nullptr)
+		{
+			while (first != last)
+			{
+				push_back(*first);
+				++first;
+			}
+		}
 
 		vector(const vector<T>& v)
 			: _start(nullptr)
