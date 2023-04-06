@@ -9,7 +9,7 @@ using std::istream;
 namespace frank {
 	template<class T>
 	class vector {
-	public: 
+	public:
 		typedef T* iterator;
 		typedef const T* const_iterator;
 
@@ -106,6 +106,16 @@ namespace frank {
 			}
 			*pos = val;
 			_finish++;
+			return pos;
+		}
+		iterator erase(iterator pos) {
+			assert(pos >= _start && pos <= _finish);
+			iterator end = _finish;
+			while (end > pos) {
+				*(end - 1) = *end;
+				end--;
+			}
+			_finish--;
 			return pos;
 		}
 	private:
