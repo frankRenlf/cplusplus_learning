@@ -7,7 +7,7 @@ void test(string& s) {
 int main() {
 	/*Solution s;
 	auto v = s.generate2(5);*/
-	frank::vector<int> v;
+	std::vector<int> v;
 	for (size_t i = 0; i < 10; i++)
 	{
 		v.insert(v.begin(), i);
@@ -19,8 +19,10 @@ int main() {
 	//		i++;
 	//	}
 	//}
-	v.erase(v.begin());
-	for (frank::vector<int>::iterator i = v.begin(); i < v.end(); i++)
+	auto pos = v.begin();
+	v.erase(pos);
+
+	for (auto i = v.begin(); i < v.end(); i++)
 	{
 		cout << *i << " ";
 	}
