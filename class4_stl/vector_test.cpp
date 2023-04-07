@@ -72,16 +72,25 @@ public:
 };
 bool myfunction(person i, person j) {
 	bool k = (i._age > j._age);
-	return k ;
+	bool l = (strcmp(i._str, j._str) > 0 ? true: false);
+	if (l) {
+		return true;
+	}
+	else {
+		if (strcmp(i._str, j._str) == 0) {
+			return k;
+		}
+	}
+	return l;
 }
 int main() {
 	//test2();
 
 	//cout << "leak? ";
 	//cout << _CrtDumpMemoryLeaks() << endl;
-	person p1(23, "abc");
-	person p2(24, "abf");
-	person p3(25, "def");
+	person p1(26, "abc");
+	person p2(23, "abc");
+	person p3(21, "www");
 	list<person> l;
 	l.push_back(p1);
 	l.push_back(p2);
