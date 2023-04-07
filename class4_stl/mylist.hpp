@@ -16,6 +16,11 @@ namespace frank {
 			, _prev(nullptr)
 			, _data(data)
 		{}
+		//~list_node() {
+		//	_next = nullptr;
+		//	_prev = nullptr;
+		//}
+
 		list_node<T>* _next;
 		list_node<T>* _prev;
 		T _data;
@@ -62,18 +67,26 @@ namespace frank {
 	public:
 		typedef __list_iterator<T> iterator;
 		iterator begin() {
-			iterator it(_head->_next);
-			return it;
+			return iterator(_head->_next);
 		}
 		iterator end() {
-			iterator it(_head);
-			return it;
+			return iterator(_head);
 		}
 		list() {
 			_head = new Node;
 			_head->_next = _head;
 			_head->_prev = _head;
 		}
+		//~list() {
+		//	Node* cur = _head->_next;
+		//	_head->_prev->_next = nullptr;
+		//	delete _head;
+		//	while (cur != nullptr) {
+		//		Node* next = cur->_next;
+		//		delete cur;
+		//		cur = next;
+		//	}
+		//}
 		void push_back(const T& data) {
 			Node* tail = _head->_prev;
 			Node* newNode = new Node(data);
@@ -86,6 +99,5 @@ namespace frank {
 	private:
 		typedef list_node<T> Node;
 		Node* _head;
-
 	};
 }
