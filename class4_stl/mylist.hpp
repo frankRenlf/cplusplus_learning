@@ -27,8 +27,9 @@ namespace frank {
 	};
 	template<class T>
 	class __list_iterator {
-	public:
 		typedef list_node<T> Node;
+		typedef __list_iterator<T> self;
+	public:
 		Node* _node;
 		__list_iterator(Node* node)
 			:_node(node)
@@ -36,28 +37,28 @@ namespace frank {
 		T& operator*() {
 			return _node->_data;
 		}
-		__list_iterator<T>& operator++() {
+		self& operator++() {
 			_node = _node->_next;
 			return *this;
 		}
-		__list_iterator<T> operator++(int) {
-			__list_iterator<T> old = *this;
+		self operator++(int) {
+			self old = *this;
 			_node = _node->_next;
 			return old;
 		}
-		__list_iterator<T>& operator--() {
+		self& operator--() {
 			_node = _node->_prev;
 			return *this;
 		}
-		__list_iterator<T> operator--(int) {
-			__list_iterator<T> old = *this;
+		self operator--(int) {
+			self old = *this;
 			_node = _node->_prev;
 			return old;
 		}
-		bool operator!=(const __list_iterator<T>& it) {
+		bool operator!=(const self& it) {
 			return _node != it._node;
 		}
-		bool operator==(const __list_iterator<T>& it) {
+		bool operator==(const self& it) {
 			return _node == it._node;
 		}
 	}; 
