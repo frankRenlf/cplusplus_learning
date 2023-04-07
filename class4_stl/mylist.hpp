@@ -37,6 +37,9 @@ namespace frank {
 		T& operator*() {
 			return _node->_data;
 		}
+		T* operator->() {
+			return &(operator*());
+		}
 		self& operator++() {
 			_node = _node->_next;
 			return *this;
