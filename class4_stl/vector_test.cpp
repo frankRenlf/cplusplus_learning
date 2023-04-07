@@ -83,27 +83,27 @@ bool myfunction(person i, person j) {
 	}
 	return l;
 }
-int main() {
-	//test2();
-
-	//cout << "leak? ";
-	//cout << _CrtDumpMemoryLeaks() << endl;
-	person p1(26, "abc");
-	person p2(23, "abc");
-	person p3(21, "www");
-	list<person> l;
-	l.push_back(p1);
-	l.push_back(p2);
-	l.push_back(p3);
-	vector<person> v;
-	for (auto var : l)
-	{
-		v.push_back(var);
-	}
-	sort(v.begin(), v.end(), myfunction);
-	for (auto var : v)
-	{
-		cout << var._str << " " << var._age << endl;
-	}
-	return 0;
-}
+//int main() {
+//	//test2();
+//
+//	//cout << "leak? ";
+//	//cout << _CrtDumpMemoryLeaks() << endl;
+//	person p1(26, "abc");
+//	person p2(23, "abc");
+//	person p3(21, "www");
+//	list<person> l;
+//	l.push_back(p1);
+//	l.push_back(p2);
+//	l.push_back(p3);
+//	vector<person> v;
+//	for (auto var : l)
+//	{
+//		v.push_back(var);
+//	}
+//	sort(v.begin(), v.end(), myfunction);
+//	for (auto var : v)
+//	{
+//		cout << var._str << " " << var._age << endl;
+//	}
+//	return 0;
+//}

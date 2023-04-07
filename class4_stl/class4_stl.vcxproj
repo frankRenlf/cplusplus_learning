@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="leetcode.cpp" />
+    <ClCompile Include="list_test.cpp" />
     <ClCompile Include="string_test.cpp" />
     <ClCompile Include="vector_test.cpp" />
   </ItemGroup>
