@@ -11,8 +11,4 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(7,16): w
           [
               T=int
           ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(12,5): error C2676: 二进制“++”:“frank::__list_iterator<T>”不定义该运算符或到预定义运算符可接收的类型的转换
-          with
-          [
-              T=int
-          ]
+  class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

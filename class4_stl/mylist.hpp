@@ -35,9 +35,19 @@ namespace frank {
 			_node = _node->_next;
 			return *this;
 		}
+		__list_iterator<T> operator++(int) {
+			__list_iterator<T> old = *this;
+			_node = _node->_next;
+			return old;
+		}
 		__list_iterator<T>& operator--() {
 			_node = _node->_prev;
 			return *this;
+		}
+		__list_iterator<T> operator--(int) {
+			__list_iterator<T> old = *this;
+			_node = _node->_prev;
+			return old;
 		}
 		bool operator!=(const __list_iterator<T>& it) {
 			return _node != it._node;
@@ -51,6 +61,14 @@ namespace frank {
 	class list {
 	public:
 		typedef __list_iterator<T> iterator;
+		iterator begin() {
+			iterator it(_head->_next);
+			return it;
+		}
+		iterator end() {
+			iterator it(_head);
+			return it;
+		}
 		list() {
 			_head = new Node;
 			_head->_next = _head;
@@ -63,14 +81,6 @@ namespace frank {
 			newNode->_prev = tail;
 			newNode->_next = _head;
 			_head->_prev = newNode;
-		}
-		iterator begin() {
-			iterator it(_head->_next);
-			return it;
-		}
-		iterator end() {
-			iterator it(_head);
-			return it;
 		}
 
 	private:

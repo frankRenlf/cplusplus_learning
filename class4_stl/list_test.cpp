@@ -9,7 +9,7 @@ void test3() {
 	frank::list<int>::iterator it = l.begin();
 	while (it != l.end()) {
 		cout << *it << " ";
-		it++;
+		++it;
 	}
 	cout << endl;
 }
