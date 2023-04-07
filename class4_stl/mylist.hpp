@@ -60,7 +60,7 @@ namespace frank {
 		bool operator==(const __list_iterator<T>& it) {
 			return _node == it._node;
 		}
-	};
+	}; 
 
 	template<class T>
 	class list {
