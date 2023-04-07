@@ -58,11 +58,43 @@ void test2() {
 		cout << endl;
 	}
 }
+class person {
+public:
 
+	person(int age, const char* str = "")
+		:_age(age)
+	{
+		_str = new char[strlen(str) + 1];
+		strcpy(_str, str);
+	}
+	char* _str;
+	int _age;
+};
+bool myfunction(person i, person j) {
+	bool k = (i._age > j._age);
+	return k ;
+}
 int main() {
-	test2();
+	//test2();
 
-	cout << "leak? ";
-	cout << _CrtDumpMemoryLeaks() << endl;
+	//cout << "leak? ";
+	//cout << _CrtDumpMemoryLeaks() << endl;
+	person p1(23, "abc");
+	person p2(24, "abf");
+	person p3(25, "def");
+	list<person> l;
+	l.push_back(p1);
+	l.push_back(p2);
+	l.push_back(p3);
+	vector<person> v;
+	for (auto var : l)
+	{
+		v.push_back(var);
+	}
+	sort(v.begin(), v.end(), myfunction);
+	for (auto var : v)
+	{
+		cout << var._str << " " << var._age << endl;
+	}
 	return 0;
 }

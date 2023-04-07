@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h" />
+    <ClInclude Include="mylist.hpp" />
     <ClInclude Include="mystring.h" />
     <ClInclude Include="myvector.hpp" />
     <ClInclude Include="other_string.h" />

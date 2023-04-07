@@ -1,0 +1,26 @@
+﻿  leetcode.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(12,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(31,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(38,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(45,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(67,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(135,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(166,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  string_test.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(20,4): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(77,4): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(97,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(200,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(205,4): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mystring.h(218,4): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\other_string.h(19,4): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\other_string.h(136,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  vector_test.cpp
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(12,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(31,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(38,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(45,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(67,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(135,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(166,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\vector_test.cpp(68,3): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
