@@ -12,8 +12,6 @@ public:
 template<class T>
 void print_list(frank::list<T> lt) {
 	auto it = lt.begin();
-	lt.insert(it, 10);
-	it = lt.begin();
 	while (it != lt.end()) {
 		cout << *it << " ";
 		++it;
@@ -26,6 +24,8 @@ void test3() {
 	{
 		l.push_back(i);
 	}
+	print_list(l);
+	l.pop_back();
 	print_list(l);
 }
 

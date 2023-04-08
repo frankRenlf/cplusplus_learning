@@ -100,14 +100,17 @@ namespace frank {
 		//	}
 		//}
 		void push_back(const T& data) {
-			Node* tail = _head->_prev;
-			Node* newNode = new Node(data);
-			tail->_next = newNode;
-			newNode->_prev = tail;
-			newNode->_next = _head;
-			_head->_prev = newNode;
+			insert(end(), data);
 		}
-
+		void push_front(const T& data) {
+			insert(begin(), data);
+		}
+		void pop_back() {
+			erase(--end());
+		}
+		void pop_front() {
+			erase(begin());
+		}
 		void insert(iterator pos, const T& data) {
 			Node* newNode = new Node(data);
 			Node* cur = pos._node;
@@ -115,6 +118,13 @@ namespace frank {
 			newNode->_prev = cur->_prev;
 			newNode->_next = cur;
 			cur->_prev = newNode;
+		}
+		void erase(iterator pos) {
+			assert(pos != end());
+			Node* cur = pos._node;
+			cur->_prev->_next = cur->_next;
+			cur->_next->_prev = cur->_prev;
+			delete cur;
 		}
 
 	private:
