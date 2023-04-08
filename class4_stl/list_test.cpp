@@ -9,18 +9,22 @@ public:
 	int _a1;
 	int _a2;
 };
+template<class T>
+void print_list(frank::list<T> lt) {
+	frank::list<AA>::iterator it = lt.begin();
+	while (it != lt.end()) {
+		cout << it->_a1 * it->_a2 << " ";
+		++it;
+	}
+	cout << endl;
+}
 void test3() {
 	frank::list<AA> l;
 	for (size_t i = 0; i < 5; i++)
 	{
 		l.push_back(AA(i, i));
 	}
-	frank::list<AA>::iterator it = l.begin();
-	while (it != l.end()) {
-		cout << it->_a1 * it->_a2 << " ";
-		++it;
-	}
-	cout << endl;
+	print_list(l);
 }
 
 int main() {

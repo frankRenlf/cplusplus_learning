@@ -6,5 +6,5 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(45,1): warning 
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(67,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(135,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(166,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(16,22): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(25,22): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

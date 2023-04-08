@@ -64,7 +64,7 @@ namespace frank {
 		bool operator==(const self& it) {
 			return _node == it._node;
 		}
-	}; 
+	};
 
 	template<class T>
 	class list {
@@ -73,7 +73,13 @@ namespace frank {
 		iterator begin() {
 			return iterator(_head->_next);
 		}
+		iterator begin() const {
+			return iterator(_head->_next);
+		}
 		iterator end() {
+			return iterator(_head);
+		}
+		iterator end() const {
 			return iterator(_head);
 		}
 		list() {
