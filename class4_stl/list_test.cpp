@@ -10,7 +10,7 @@ public:
 	int _a2;
 };
 template<class T>
-void print_list(frank::list<T> lt) {
+void print_list(frank::list<T>& lt) {
 	auto it = lt.begin();
 	while (it != lt.end()) {
 		cout << *it << " ";
@@ -27,14 +27,13 @@ void test3() {
 	auto it = lt.begin();
 	while (it != lt.end()) {
 		if (*it % 2 == 0) {
-			it=lt.erase(it);
+			it = lt.erase(it);
 		}
 		else {
 			++it;
 		}
 	}
 	print_list(lt);
-	lt.clear();
 }
 
 int main() {

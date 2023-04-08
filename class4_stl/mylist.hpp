@@ -16,10 +16,10 @@ namespace frank {
 			, _prev(nullptr)
 			, _data(data)
 		{}
-		~list_node() {
-			_next = nullptr;
-			_prev = nullptr;
-		}
+		//~list_node() {
+		//	_next = nullptr;
+		//	_prev = nullptr;
+		//}
 
 		list_node<T>* _next;
 		list_node<T>* _prev;
@@ -88,6 +88,14 @@ namespace frank {
 			_head = new Node;
 			_head->_next = _head;
 			_head->_prev = _head;
+		}
+		list(const list<T>& lt) {
+			_head = new Node;
+			_head->_next = _head;
+			_head->_prev = _head;
+			for (auto el : lt) {
+				push_back(el);
+			}
 		}
 		~list() {
 			clear();
