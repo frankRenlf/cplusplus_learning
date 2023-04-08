@@ -10,8 +10,8 @@ public:
 	int _a2;
 };
 template<class T>
-void print_list(frank::list<T> lt) {
-	frank::list<AA>::iterator it = lt.begin();
+void print_list(const frank::list<T> lt) {
+	frank::list<AA>::const_iterator it = lt.begin();
 	while (it != lt.end()) {
 		cout << it->_a1 * it->_a2 << " ";
 		++it;

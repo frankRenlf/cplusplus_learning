@@ -25,19 +25,19 @@ namespace frank {
 		list_node<T>* _prev;
 		T _data;
 	};
-	template<class T>
+	template<class T, class Ref, class Ptr>
 	class __list_iterator {
 		typedef list_node<T> Node;
-		typedef __list_iterator<T> self;
+		typedef __list_iterator<T, Ref, Ptr> self;
 	public:
 		Node* _node;
 		__list_iterator(Node* node)
 			:_node(node)
 		{}
-		T& operator*() {
+		Ref operator*() {
 			return _node->_data;
 		}
-		T* operator->() {
+		Ptr operator->() {
 			return &(operator*());
 		}
 		self& operator++() {
@@ -68,19 +68,21 @@ namespace frank {
 
 	template<class T>
 	class list {
+		typedef list_node<T> Node;
 	public:
-		typedef __list_iterator<T> iterator;
+		typedef __list_iterator<T, T&, T*> iterator;
+		typedef __list_iterator<const T, const T&, const T*> const_iterator;
 		iterator begin() {
 			return iterator(_head->_next);
 		}
-		iterator begin() const {
-			return iterator(_head->_next);
+		const_iterator begin() const {
+			return const_iterator(_head->_next);
 		}
 		iterator end() {
 			return iterator(_head);
 		}
-		iterator end() const {
-			return iterator(_head);
+		const_iterator end() const {
+			return const_iterator(_head);
 		}
 		list() {
 			_head = new Node;
@@ -107,7 +109,6 @@ namespace frank {
 		}
 
 	private:
-		typedef list_node<T> Node;
 		Node* _head;
 	};
 }
