@@ -89,7 +89,7 @@ namespace frank {
 		}
 		list(const list<T>& lt) {
 			empty_init();
-			list<T> tmp(lt.begin(), lt.end());
+			list<T> tmp(lt.begin(), lt.end()); 
 			swap(tmp);
 		}
 		list<T>& operator=(list<T> lt) {
