@@ -85,22 +85,33 @@ namespace frank {
 			return const_iterator(_head);
 		}
 		list() {
-			_head = new Node;
-			_head->_next = _head;
-			_head->_prev = _head;
+			empty_init();
 		}
 		list(const list<T>& lt) {
-			_head = new Node;
-			_head->_next = _head;
-			_head->_prev = _head;
-			for (auto el : lt) {
-				push_back(el);
+			empty_init();
+			list<T> tmp(lt.begin(), lt.end());
+			swap(tmp);
+		}
+		template<class InputIterator>
+		list(InputIterator first, InputIterator last) {
+			empty_init();
+			while (first != last) {
+				push_back(*first);
+				++first;
 			}
 		}
 		~list() {
 			clear();
 			delete _head;
 			_head = nullptr;
+		}
+		void swap(list<T>& lt) {
+			std::swap(_head, lt._head);
+		}
+		void empty_init() {
+			_head = new Node;
+			_head->_next = _head;
+			_head->_prev = _head;
 		}
 		void clear() {
 			iterator it = begin();

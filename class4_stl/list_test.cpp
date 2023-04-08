@@ -24,6 +24,7 @@ void test3() {
 	{
 		lt.push_back(i);
 	}
+	frank::list<int> lt2(lt);
 	auto it = lt.begin();
 	while (it != lt.end()) {
 		if (*it % 2 == 0) {
@@ -33,6 +34,8 @@ void test3() {
 			++it;
 		}
 	}
+
+	print_list(lt2);
 	print_list(lt);
 }
 
