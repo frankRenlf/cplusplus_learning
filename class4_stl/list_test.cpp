@@ -10,19 +10,21 @@ public:
 	int _a2;
 };
 template<class T>
-void print_list(const frank::list<T> lt) {
-	frank::list<AA>::const_iterator it = lt.begin();
+void print_list(frank::list<T> lt) {
+	auto it = lt.begin();
+	lt.insert(it, 10);
+	it = lt.begin();
 	while (it != lt.end()) {
-		cout << it->_a1 * it->_a2 << " ";
+		cout << *it << " ";
 		++it;
 	}
 	cout << endl;
 }
 void test3() {
-	frank::list<AA> l;
+	frank::list<int> l;
 	for (size_t i = 0; i < 5; i++)
 	{
-		l.push_back(AA(i, i));
+		l.push_back(i);
 	}
 	print_list(l);
 }

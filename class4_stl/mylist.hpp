@@ -108,6 +108,15 @@ namespace frank {
 			_head->_prev = newNode;
 		}
 
+		void insert(iterator pos, const T& data) {
+			Node* newNode = new Node(data);
+			Node* cur = pos._node;
+			cur->_prev->_next = newNode;
+			newNode->_prev = cur->_prev;
+			newNode->_next = cur;
+			cur->_prev = newNode;
+		}
+
 	private:
 		Node* _head;
 	};
