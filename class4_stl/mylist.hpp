@@ -16,10 +16,10 @@ namespace frank {
 			, _prev(nullptr)
 			, _data(data)
 		{}
-		//~list_node() {
-		//	_next = nullptr;
-		//	_prev = nullptr;
-		//}
+		~list_node() {
+			_next = nullptr;
+			_prev = nullptr;
+		}
 
 		list_node<T>* _next;
 		list_node<T>* _prev;
@@ -89,16 +89,17 @@ namespace frank {
 			_head->_next = _head;
 			_head->_prev = _head;
 		}
-		//~list() {
-		//	Node* cur = _head->_next;
-		//	_head->_prev->_next = nullptr;
-		//	delete _head;
-		//	while (cur != nullptr) {
-		//		Node* next = cur->_next;
-		//		delete cur;
-		//		cur = next;
-		//	}
-		//}
+		~list() {
+			clear();
+			delete _head;
+			_head = nullptr;
+		}
+		void clear() {
+			iterator it = begin();
+			while (it != end()) {
+				it = erase(it);
+			}
+		}
 		void push_back(const T& data) {
 			insert(end(), data);
 		}
@@ -111,20 +112,23 @@ namespace frank {
 		void pop_front() {
 			erase(begin());
 		}
-		void insert(iterator pos, const T& data) {
+		iterator insert(iterator pos, const T& data) {
 			Node* newNode = new Node(data);
 			Node* cur = pos._node;
 			cur->_prev->_next = newNode;
 			newNode->_prev = cur->_prev;
 			newNode->_next = cur;
 			cur->_prev = newNode;
+			return iterator(newNode);
 		}
-		void erase(iterator pos) {
+		iterator erase(iterator pos) {
 			assert(pos != end());
 			Node* cur = pos._node;
-			cur->_prev->_next = cur->_next;
-			cur->_next->_prev = cur->_prev;
+			Node* next = cur->_next;
+			cur->_prev->_next = next;
+			next->_prev = cur->_prev;
 			delete cur;
+			return iterator(next);
 		}
 
 	private:

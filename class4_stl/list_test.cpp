@@ -19,14 +19,22 @@ void print_list(frank::list<T> lt) {
 	cout << endl;
 }
 void test3() {
-	frank::list<int> l;
+	frank::list<int> lt;
 	for (size_t i = 0; i < 5; i++)
 	{
-		l.push_back(i);
+		lt.push_back(i);
 	}
-	print_list(l);
-	l.pop_back();
-	print_list(l);
+	auto it = lt.begin();
+	while (it != lt.end()) {
+		if (*it % 2 == 0) {
+			it=lt.erase(it);
+		}
+		else {
+			++it;
+		}
+	}
+	print_list(lt);
+	lt.clear();
 }
 
 int main() {
