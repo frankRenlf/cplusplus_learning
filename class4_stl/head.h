@@ -2,10 +2,39 @@
 #include<iostream>
 #include<map>
 #include<vector>
+#include<queue>
+#include<stack>
 #include<algorithm>
 #include<functional>
 #include <unordered_map>
 using namespace std;
+class MinStack {
+public:
+	MinStack() {
+		stack2.push(INT_MAX);
+	}
+
+	void push(int val) {
+		stack1.push(val);
+		stack2.push(min(stack2.top(), val));
+	}
+
+	void pop() {
+		stack1.pop();
+		stack2.pop();
+	}
+
+	int top() {
+		return stack1.top();
+	}
+
+	int getMin() {
+		return stack2.top();
+	}
+private:
+	stack<int> stack1;
+	stack<int> stack2;
+};
 class Solution {
 public:
 	string reverseOnlyLetters(string s) {

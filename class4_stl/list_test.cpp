@@ -42,10 +42,10 @@ void test3() {
 
 }
 
-int main() {
-	test3();
-	cout << "leak? ";
-	cout << _CrtDumpMemoryLeaks() << endl;
-
-	return 0;
-}
+//int main() {
+//	test3();
+//	cout << "leak? ";
+//	cout << _CrtDumpMemoryLeaks() << endl;
+//
+//	return 0;
+//}
