@@ -92,9 +92,12 @@ namespace frank {
 			list<T> tmp(lt.begin(), lt.end());
 			swap(tmp);
 		}
+		list<T>& operator=(list<T> lt) {
+			return *this;
+		}
 		template<class InputIterator>
 		list(InputIterator first, InputIterator last) {
-			empty_init();
+			empty_init(); 
 			while (first != last) {
 				push_back(*first);
 				++first;
