@@ -71,7 +71,7 @@ namespace frank {
 		typedef list_node<T> Node;
 	public:
 		typedef __list_iterator<T, T&, T*> iterator;
-		typedef __list_iterator<const T, const T&, const T*> const_iterator;
+		typedef __list_iterator<T, const T&, const T*> const_iterator;
 		iterator begin() {
 			return iterator(_head->_next);
 		}

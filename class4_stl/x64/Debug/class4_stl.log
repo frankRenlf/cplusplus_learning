@@ -7,20 +7,4 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(67,1): warning 
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(135,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(166,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(25,22): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mylist.hpp(85,1): error C2440: “<function-style-cast>”: 无法从“frank::list_node<T> *const ”转换为“frank::__list_iterator<const T,const T &,const T *>”
-          with
-          [
-              T=AA
-          ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mylist.hpp(85,1): message : 无构造函数可以接受源类型，或构造函数重载决策不明确
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mylist.hpp(84): message : 在编译 类 模板 成员函数“frank::__list_iterator<const T,const T &,const T *> frank::list<T>::end(void) const”时
-          with
-          [
-              T=AA
-          ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(15): message : 查看对正在编译的函数 模板 实例化“frank::__list_iterator<const T,const T &,const T *> frank::list<T>::end(void) const”的引用
-          with
-          [
-              T=AA
-          ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(14): message : 查看对正在编译的 类 模板 实例化“frank::list<AA>”的引用
+  class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe
