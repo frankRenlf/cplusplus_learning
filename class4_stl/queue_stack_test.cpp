@@ -12,9 +12,10 @@ void test4() {
 	}
 }
 void test5() {
-	vector<string> v{ "10","6","9","3","+","-11","*","/","*","17","+","5","+" };
+	vector<string> v{ "10","6","9","3","+"
+		,"-11","*","/","*","17","+","5","+" };
 	Solution s;
-	cout<< s.evalRPN(v);
+	cout << s.evalRPN(v);
 }
 int main() {
 	test5();
