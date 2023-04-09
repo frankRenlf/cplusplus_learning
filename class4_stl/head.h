@@ -8,7 +8,43 @@
 #include<algorithm>
 #include<functional>
 #include <unordered_map>
+
 using namespace std;
+class MyStack {
+public:
+	MyStack() {
+
+	}
+
+	void push(int x) {
+		_q.push(x);
+		while (!_s.empty()) {
+			_q.push(_s.front());
+			_s.pop();
+		}
+		while (!_q.empty()) {
+			_s.push(_q.front());
+			_q.pop();
+		}
+	}
+
+	int pop() {
+		int ret = _s.front();
+		_s.pop();
+		return ret;
+	}
+
+	int top() {
+		return _s.front();
+	}
+
+	bool empty() {
+		return _s.empty() && _q.empty();
+	}
+private:
+	queue<int> _s;
+	queue<int> _q;
+};
 class MinStack {
 public:
 	MinStack() {
@@ -38,10 +74,21 @@ private:
 };
 class Solution {
 public:
+	int findKthLargest(vector<int>& nums, int k) {
+		priority_queue<int, vector<int>, greater<int>> pq;
+		for (auto el : nums) {
+			pq.push(el);
+		}
+		while (k > 1) {
+			pq.pop();
+			k--;
+		}
+		return pq.top();
+	}
 	int evalRPN(vector<string>& tokens) {
 		stack<int> _st;
 		for (auto s : tokens) {
-			if (isdigit(s[s.size()-1])) {
+			if (isdigit(s[s.size() - 1])) {
 				_st.push(stoi(s));
 			}
 			else {
