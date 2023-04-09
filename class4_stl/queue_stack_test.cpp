@@ -17,7 +17,7 @@ void test5() {
 	Solution s;
 	cout << s.evalRPN(v);
 }
-int main() {
-	test5();
-	return 0;
-}
+//int main() {
+//	test5();
+//	return 0;
+//}
