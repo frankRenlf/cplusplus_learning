@@ -37,6 +37,28 @@ private:
 };
 class Solution {
 public:
+	bool IsPopOrder(vector<int> pushV, vector<int> popV) {
+		int n = pushV.size();
+		//辅助栈
+		stack<int> s;
+		//遍历入栈的下标
+		int j = 0;
+		//遍历出栈的数组
+		for (int i = 0; i < n; i++) {
+			//入栈：栈为空或者栈顶不等于出栈数组
+			while (j < n && (s.empty() || s.top() != popV[i])) {
+				s.push(pushV[j]);
+				j++;
+			}
+			//栈顶等于出栈数组
+			if (s.top() == popV[i])
+				s.pop();
+			//不匹配序列
+			else
+				return false;
+		}
+		return true;
+	}
 	string reverseOnlyLetters(string s) {
 		int n = s.size();
 		string::iterator left = s.begin(), right = s.end() - 1;
