@@ -1,18 +1,5 @@
 #include"mypriority_queue.hpp"
-namespace frank {
-	template<class T>
-	struct less {
-		bool operator()(const T& x, const T& y) {
-			return x < y;
-		}
-	};
-	template<class T>
-	struct greator {
-		bool operator()(const T& x, const T& y) {
-			return x > y;
-		}
-	};
-}
+
 void test6() {
 	frank::less<int> lessComp;
 	cout << lessComp(1, 2) << endl;
