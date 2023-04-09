@@ -92,7 +92,6 @@ public:
 				_st.push(stoi(s));
 			}
 			else {
-				string oper = s;
 				int a1 = _st.top();
 				_st.pop();
 				int a2 = _st.top();

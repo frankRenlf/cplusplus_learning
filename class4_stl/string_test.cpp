@@ -1,5 +1,4 @@
 #include"mystring.h"
-#include"other_string.h"
 
 //int main() {
 //
@@ -25,7 +24,7 @@
 void test1() {
 	frank::string s1("012345678");
 	frank::string s2;
-	cin >> s2;
+	std::cin >> s2;
 	cout << s2 << endl;
 }
 //int main() {
