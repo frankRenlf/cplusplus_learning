@@ -13,6 +13,6 @@ namespace frank {
 		size_t size()const { return _c.size(); }
 		bool empty()const { return _c.empty(); }
 	private:
-		std::vector<T> _c;
+		vector<T> _c;
 	};
 }

@@ -38,13 +38,13 @@
     <ClInclude Include="mystring.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="other_string.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="myvector.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="mylist.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mystack.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
