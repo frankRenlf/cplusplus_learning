@@ -5,6 +5,7 @@
 #include<vector>
 #include<queue>
 #include<stack>
+#include<deque>
 #include<algorithm>
 #include<functional>
 #include <unordered_map>
