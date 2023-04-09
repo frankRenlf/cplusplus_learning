@@ -1,7 +1,7 @@
 #include"head.h"
 
 namespace frank {
-	template<class T>
+	template<class T, class Container = deque<T>>
 	class stack
 	{
 	public:
@@ -13,6 +13,6 @@ namespace frank {
 		size_t size()const { return _c.size(); }
 		bool empty()const { return _c.empty(); }
 	private:
-		vector<T> _c;
+		Container _c;
 	};
 }
