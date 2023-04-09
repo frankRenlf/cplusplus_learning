@@ -1,50 +1,10 @@
-﻿  leetcode.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2327: “MinStack::stack”: 不是类型名称、静态或枚举数
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2059: 语法错误:“<”
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,14): error C2238: 意外的标记位于“;”之前
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(39,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(58,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(65,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+﻿  queue_stack_test.cpp
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(72,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(94,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(162,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(193,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-  list_test.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2327: “MinStack::stack”: 不是类型名称、静态或枚举数
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2059: 语法错误:“<”
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,14): error C2238: 意外的标记位于“;”之前
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(39,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(58,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(65,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(72,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(94,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(162,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(193,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\list_test.cpp(25,17): warning C4267: “参数”: 从“size_t”转换到“const T”，可能丢失数据
-          with
-          [
-              T=int
-          ]
-  queue_stack_test.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2327: “MinStack::stack”: 不是类型名称、静态或枚举数
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2059: 语法错误:“<”
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,14): error C2238: 意外的标记位于“;”之前
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(39,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(58,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(65,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(72,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(94,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(162,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(193,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-  vector_test.cpp
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2327: “MinStack::stack”: 不是类型名称、静态或枚举数
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,7): error C2059: 语法错误:“<”
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(34,14): error C2238: 意外的标记位于“;”之前
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(39,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(58,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(65,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(72,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(94,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(162,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(193,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-  正在生成代码...
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(113,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(120,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(127,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(149,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(217,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\head.h(248,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

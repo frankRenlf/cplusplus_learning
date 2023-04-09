@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<string>
 #include<map>
 #include<vector>
 #include<queue>
@@ -37,6 +38,36 @@ private:
 };
 class Solution {
 public:
+	int evalRPN(vector<string>& tokens) {
+		stack<int> _st;
+		for (auto s : tokens) {
+			if (isdigit(s[s.size()-1])) {
+				_st.push(stoi(s));
+			}
+			else {
+				string oper = s;
+				int a1 = _st.top();
+				_st.pop();
+				int a2 = _st.top();
+				_st.pop();
+				int add = 0;
+				if (s == "+") {
+					add = a2 + a1;
+				}
+				else if (s == "-") {
+					add = a2 - a1;
+				}
+				else if (s == "*") {
+					add = a2 * a1;
+				}
+				else {
+					add = a2 / a1;
+				}
+				_st.push(add);
+			}
+		}
+		return _st.top();
+	}
 	bool IsPopOrder(vector<int> pushV, vector<int> popV) {
 		int n = pushV.size();
 		//¸¨ÖúÕ»

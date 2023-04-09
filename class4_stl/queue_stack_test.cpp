@@ -11,7 +11,12 @@ void test4() {
 		q.pop();
 	}
 }
+void test5() {
+	vector<string> v{ "10","6","9","3","+","-11","*","/","*","17","+","5","+" };
+	Solution s;
+	cout<< s.evalRPN(v);
+}
 int main() {
-	test4();
+	test5();
 	return 0;
 }
