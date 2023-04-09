@@ -53,7 +53,7 @@ namespace frank {
 			int child = parent * 2 + 1;
 			while (child < _con.size()) {
 				if (child + 1 < _con.size()
-					&& _con[child] < _con[child + 1]) {
+					&& _cmp(_con[child], _con[child + 1])) {
 					child++;
 				}
 				if (_cmp(_con[parent], _con[child])) {
