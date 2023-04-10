@@ -1,5 +1,14 @@
 #include"mypriority_queue.hpp"
-
+struct lessStr {
+	bool operator()(const string& s1, const string& s2) {
+		return s1 < s2;
+	}
+};
+struct greatorStr {
+	bool operator()(const string& s1, const string& s2) {
+		return s1 > s2;
+	}
+};
 void test6() {
 	frank::less<int> lessComp;
 	frank::priority_queue<int, std::vector<int>, frank::less<int>> pq;
@@ -13,8 +22,27 @@ void test6() {
 		pq.pop();
 	}
 }
+void test7() {
+	frank::less<string> lessComp;
+	frank::priority_queue<string, std::vector<string>, greatorStr> pq;
+	pq.push("345");
+	pq.push("1234");
+	pq.push("567");
+	for (size_t i = 0; i < 3; i++)
+	{
+		cout << pq.top() << " ";
+		pq.pop();
+	}
+	cout << endl;
+	vector<string> v = { "345","1231","567" };
+	sort(v.begin(), v.end(), lessStr());
+	for (auto e : v) {
+		cout << e << " ";
+	}
+	cout << endl;
+}
 
 int main() {
-	test6();
+	test7();
 	return 0;
 }
