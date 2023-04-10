@@ -18,6 +18,7 @@ namespace frank {
 	template<class T, class Container = vector<T>, class Comparator = less<T>>
 	class priority_queue {
 	public:
+
 		void push(const T& data) {
 			_con.push_back(data);
 			AdjustUp(_con.size() - 1);
