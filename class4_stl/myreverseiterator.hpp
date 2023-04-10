@@ -12,17 +12,17 @@ namespace frank {
 			:_it(it)
 		{}
 		Ref operator*() {
-			iterator tmp = it;
+			Iterator tmp = _it;
 			return *(--tmp);
 		}
 		Ptr operator->() {
 			return &(operator*());
 		}
-		Self& operator++(const) {
+		Self& operator++() {
 			--_it;
 			return *this;
 		}
-		Self& operator--(const) {
+		Self& operator--() {
 			++_it;
 			return *this;
 		}

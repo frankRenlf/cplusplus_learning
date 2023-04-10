@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include <cassert>
+#include "myreverseiterator.hpp"
 #define DEFAULT_SIZE 4
 using std::cout;
 using std::endl;
@@ -72,6 +73,22 @@ namespace frank {
 	public:
 		typedef __list_iterator<T, T&, T*> iterator;
 		typedef __list_iterator<T, const T&, const T*> const_iterator;
+
+		typedef reverse_iterator<iterator, T&, T*> riterator;
+		typedef reverse_iterator<const_iterator, const T&, const T*> const_riterator;
+		riterator rbegin() {
+			return riterator(end());
+		}
+		const_riterator rbegin() const {
+			return const_riterator(end());
+		}
+		riterator rend() {
+			return riterator(begin());
+		}
+		const_riterator rend() const {
+			return const_riterator(begin());
+		}
+
 		iterator begin() {
 			return iterator(_head->_next);
 		}
@@ -89,7 +106,7 @@ namespace frank {
 		}
 		list(const list<T>& lt) {
 			empty_init();
-			list<T> tmp(lt.begin(), lt.end()); 
+			list<T> tmp(lt.begin(), lt.end());
 			swap(tmp);
 		}
 		list<T>& operator=(list<T> lt) {
@@ -97,7 +114,7 @@ namespace frank {
 		}
 		template<class InputIterator>
 		list(InputIterator first, InputIterator last) {
-			empty_init(); 
+			empty_init();
 			while (first != last) {
 				push_back(*first);
 				++first;

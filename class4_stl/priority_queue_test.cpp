@@ -54,7 +54,7 @@ void test8() {
 	cout << endl;
 }
 
-int main() {
-	test8();
-	return 0;
-}
+//int main() {
+//	test8();
+//	return 0;
+//}

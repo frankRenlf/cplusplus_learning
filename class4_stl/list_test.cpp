@@ -41,11 +41,26 @@ void test3() {
 	print_list(lt3);
 
 }
+void test9() {
+	frank::list<int> lt;
+	for (size_t i = 0; i < 5; i++)
+	{
+		lt.push_back(i);
+	}
+	const frank::list<int> lt2 = lt;
+	lt.rbegin();
+	frank::list<int>::const_riterator it = lt2.rbegin();
+	while (it != lt2.rend()) {
+		cout << *it << " ";
+		++it;
+	}
+	cout << endl;
+}
 
-//int main() {
-//	test3();
-//	cout << "leak? ";
-//	cout << _CrtDumpMemoryLeaks() << endl;
-//
-//	return 0;
-//}
+int main() {
+	test9();
+	cout << "leak? ";
+	cout << _CrtDumpMemoryLeaks() << endl;
+
+	return 0;
+}
