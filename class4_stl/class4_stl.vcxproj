@@ -139,6 +139,7 @@
     <ClInclude Include="mylist.hpp" />
     <ClInclude Include="mypriority_queue.hpp" />
     <ClInclude Include="myqueue.hpp" />
+    <ClInclude Include="myreverseiterator.hpp" />
     <ClInclude Include="mystack.hpp" />
     <ClInclude Include="mystring.h" />
     <ClInclude Include="myvector.hpp" />
