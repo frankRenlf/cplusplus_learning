@@ -14,8 +14,9 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cp
           ]
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(13,19): warning C4101: “lessComp”: 未引用的局部变量
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(26,22): warning C4101: “lessComp”: 未引用的局部变量
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(24,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(22): message : 在编译 类 模板 成员函数“void frank::priority_queue<std::string,std::vector<std::string,std::allocator<std::string>>,greatorStr>::push(const T &)”时
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(48,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(39,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(37): message : 在编译 类 模板 成员函数“void frank::priority_queue<std::string,std::vector<std::string,std::allocator<std::string>>,greatorStr>::push(const T &)”时
           with
           [
               T=std::string
@@ -26,4 +27,17 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cp
               T=std::string
           ]
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(27): message : 查看对正在编译的 类 模板 实例化“frank::priority_queue<std::string,std::vector<std::string,std::allocator<std::string>>,greatorStr>”的引用
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(31,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(47): message : 查看对正在编译的函数 模板 实例化“frank::priority_queue<std::string,std::vector<std::string,std::allocator<std::string>>,std::greater<std::string>>::priority_queue<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>(Iterator,Iterator)”的引用
+          with
+          [
+              _Ty=std::string,
+              Iterator=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::string>>>
+          ]
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(47): message : 查看对正在编译的函数 模板 实例化“frank::priority_queue<std::string,std::vector<std::string,std::allocator<std::string>>,std::greater<std::string>>::priority_queue<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>(Iterator,Iterator)”的引用
+          with
+          [
+              _Ty=std::string,
+              Iterator=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::string>>>
+          ]
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

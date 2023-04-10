@@ -41,8 +41,20 @@ void test7() {
 	}
 	cout << endl;
 }
+void test8() {
+	vector<string> v = { "345","1231","567" };
+
+	frank::priority_queue<string, std::vector<string>, greater<string>> pq(v.begin()+1, v.end());
+	int sz = pq.size();
+	for (size_t i = 0; i < sz; i++)
+	{
+		cout << pq.top() << " ";
+		pq.pop();
+	}
+	cout << endl;
+}
 
 int main() {
-	test7();
+	test8();
 	return 0;
 }

@@ -19,6 +19,21 @@ namespace frank {
 	class priority_queue {
 	public:
 
+		priority_queue() {}
+
+		template<class Iterator>
+		priority_queue(Iterator first, Iterator last)
+		{
+			while (first != last) {
+				_con.push_back(*first);
+				first++;
+			}
+			int count = _con.size();
+			int root = ((count - 2) >> 1);
+			for (; root >= 0; root--)
+				AdjustDown(root);
+		}
+
 		void push(const T& data) {
 			_con.push_back(data);
 			AdjustUp(_con.size() - 1);
