@@ -13,16 +13,16 @@ C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cp
               T=int
           ]
 C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(4,19): warning C4101: “lessComp”: 未引用的局部变量
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(21,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(19): message : 在编译 类 模板 成员函数“void frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::greator<int>>::push(const T &)”时
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(23,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\mypriority_queue.hpp(21): message : 在编译 类 模板 成员函数“void frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::less<int>>::push(const T &)”时
           with
           [
               T=int
           ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(8): message : 查看对正在编译的函数 模板 实例化“void frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::greator<int>>::push(const T &)”的引用
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(8): message : 查看对正在编译的函数 模板 实例化“void frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::less<int>>::push(const T &)”的引用
           with
           [
               T=int
           ]
-C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(5): message : 查看对正在编译的 类 模板 实例化“frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::greator<int>>”的引用
+C:\Users\11195\source\repos\cplusplus_learning\class4_stl\priority_queue_test.cpp(5): message : 查看对正在编译的 类 模板 实例化“frank::priority_queue<int,std::vector<int,std::allocator<int>>,frank::less<int>>”的引用
   class4_stl.vcxproj -> C:\Users\11195\source\repos\cplusplus_learning\class4_stl\x64\Debug\class4_stl.exe

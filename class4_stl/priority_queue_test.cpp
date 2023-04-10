@@ -2,7 +2,7 @@
 
 void test6() {
 	frank::less<int> lessComp;
-	frank::priority_queue<int, std::vector<int>, frank::greator<int>> pq;
+	frank::priority_queue<int, std::vector<int>, frank::less<int>> pq;
 	for (size_t i = 0; i < 10; i++)
 	{
 		pq.push(i);
