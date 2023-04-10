@@ -1,6 +1,7 @@
 #include"head.h"
 
 namespace frank {
+
 	template<class T>
 	struct less {
 		bool operator()(const T& x, const T& y) {
@@ -13,6 +14,7 @@ namespace frank {
 			return x > y;
 		}
 	};
+
 	template<class T, class Container = vector<T>, class Comparator = less<T>>
 	class priority_queue {
 	public:
