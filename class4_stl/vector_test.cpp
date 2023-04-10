@@ -1,7 +1,7 @@
 #include"head.h"
 #include"myvector.hpp"
-frank::vector<frank::vector<int>> generate2(int numRows) {
-	frank::vector<frank::vector<int>> vv(numRows);
+vector<vector<int>> generate2(int numRows) {
+	vector<vector<int>> vv(numRows);
 	//vv.resize(numRows);
 	for (int i = 0; i < numRows; ++i)
 	{
@@ -48,7 +48,7 @@ void test2() {
 
 	//v = v2;
 	//print_vector(v);
-	frank::vector<frank::vector<int>> vv = generate2(5);
+	vector<vector<int>> vv = generate2(5);
 	for (size_t i = 0; i < vv.size(); i++)
 	{
 		for (size_t j = 0; j < vv[i].size(); j++)
@@ -72,7 +72,7 @@ public:
 };
 bool myfunction(person i, person j) {
 	bool k = (i._age > j._age);
-	bool l = (strcmp(i._str, j._str) > 0 ? true: false);
+	bool l = (strcmp(i._str, j._str) > 0 ? true : false);
 	if (l) {
 		return true;
 	}
@@ -107,3 +107,21 @@ bool myfunction(person i, person j) {
 //	}
 //	return 0;
 //}
+void test10() {
+	frank::vector<int> v;
+	for (size_t i = 0; i < 5; i++)
+	{
+		v.push_back(i);
+	}
+	const frank::vector<int> lt2 = v;
+	frank::vector<int>::const_riterator it = lt2.rbegin();
+	while (it != lt2.rend()) {
+		cout << *it << " ";
+		++it;
+	}
+	cout << endl;
+}
+int main() {
+	test10();
+	return 0;
+}

@@ -48,7 +48,6 @@ void test9() {
 		lt.push_back(i);
 	}
 	const frank::list<int> lt2 = lt;
-	lt.rbegin();
 	frank::list<int>::const_riterator it = lt2.rbegin();
 	while (it != lt2.rend()) {
 		cout << *it << " ";
@@ -57,10 +56,10 @@ void test9() {
 	cout << endl;
 }
 
-int main() {
-	test9();
-	cout << "leak? ";
-	cout << _CrtDumpMemoryLeaks() << endl;
-
-	return 0;
-}
+//int main() {
+//	test9();
+//	cout << "leak? ";
+//	cout << _CrtDumpMemoryLeaks() << endl;
+//
+//	return 0;
+//}

@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include <cassert>
+#include "myreverseiterator.hpp"
 #define DEFAULT_SIZE 4
 using std::cout;
 using std::endl;
@@ -12,7 +13,20 @@ namespace frank {
 	public:
 		typedef T* iterator;
 		typedef const T* const_iterator;
-
+		typedef reverse_iterator<iterator, T&, T*> riterator;
+		typedef reverse_iterator<const_iterator, const T&, const T*> const_riterator;
+		riterator rbegin() {
+			return riterator(end());
+		}
+		const_riterator rbegin() const {
+			return const_riterator(cend());
+		}
+		riterator rend() {
+			return riterator(begin());
+		}
+		const_riterator rend() const {
+			return const_riterator(cbegin());
+		}
 		iterator begin() {
 			return _start;
 		}
